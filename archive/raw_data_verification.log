@@ -1,0 +1,615 @@
+2025-02-12 23:05:21,552 - INFO - === Raw Data Verification Notebook: Logging Setup Complete ===
+2025-02-12 23:05:21,552 - INFO - Using RAW_DATA_PATH: ./data/raw/
+2025-02-12 23:05:21,552 - INFO - Logs will be written to: raw_data_verification.log
+2025-02-12 23:05:22,017 - INFO - === Starting Raw Data Verification ===
+2025-02-12 23:05:23,337 - INFO - Loaded NH_HealthCitations_Jan2025.csv with encoding=utf-8, shape=(406789, 23)
+2025-02-12 23:05:23,587 - INFO - Loaded NH_Ownership_Jan2025.csv with encoding=utf-8, shape=(144651, 13)
+2025-02-12 23:05:24,235 - INFO - Loaded NH_QualityMsr_MDS_Jan2025.csv with encoding=utf-8, shape=(251464, 23)
+2025-02-12 23:05:24,389 - INFO - Loaded NH_SurveySummary_Jan2025.csv with encoding=utf-8, shape=(44189, 41)
+2025-02-12 23:05:27,022 - INFO - Failed with encoding=utf-8: 'utf-8' codec can't decode byte 0x92 in position 43: invalid start byte
+2025-02-12 23:05:34,769 - INFO - Loaded PBJ_Daily_Non_Nurse_Staffing_Q2_2024.csv with encoding=latin1, shape=(1325324, 82)
+2025-02-12 23:05:35,987 - INFO - Failed with encoding=utf-8: 'utf-8' codec can't decode byte 0x92 in position 43: invalid start byte
+2025-02-12 23:05:39,183 - INFO - Loaded PBJ_Daily_Nurse_Staffing_Q2_2024.csv with encoding=latin1, shape=(1325324, 33)
+2025-02-12 23:05:40,320 - INFO - Loaded Skilled_Nursing_Facility_Quality_Reporting_Program_Provider_Data_Jan2025.csv with encoding=utf-8, shape=(710016, 16)
+2025-02-12 23:05:40,320 - INFO - === Summary of Loaded Raw Datasets ===
+2025-02-12 23:05:40,320 - INFO - nh_citations_raw: shape=(406789, 23), columns=['CMS Certification Number (CCN)', 'Provider Name', 'Provider Address', 'City/Town', 'State', 'ZIP Code', 'Survey Date', 'Survey Type', 'Deficiency Prefix', 'Deficiency Category', 'Deficiency Tag Number', 'Deficiency Description', 'Scope Severity Code', 'Deficiency Corrected', 'Correction Date', 'Inspection Cycle', 'Standard Deficiency', 'Complaint Deficiency', 'Infection Control Inspection Deficiency', 'Citation under IDR', 'Citation under IIDR', 'Location', 'Processing Date']
+2025-02-12 23:05:40,320 - INFO - nh_ownership_raw: shape=(144651, 13), columns=['CMS Certification Number (CCN)', 'Provider Name', 'Provider Address', 'City/Town', 'State', 'ZIP Code', 'Role played by Owner or Manager in Facility', 'Owner Type', 'Owner Name', 'Ownership Percentage', 'Association Date', 'Location', 'Processing Date']
+2025-02-12 23:05:40,321 - INFO - nh_quality_mds_raw: shape=(251464, 23), columns=['CMS Certification Number (CCN)', 'Provider Name', 'Provider Address', 'City/Town', 'State', 'ZIP Code', 'Measure Code', 'Measure Description', 'Resident type', 'Q1 Measure Score', 'Footnote for Q1 Measure Score', 'Q2 Measure Score', 'Footnote for Q2 Measure Score', 'Q3 Measure Score', 'Footnote for Q3 Measure Score', 'Q4 Measure Score', 'Footnote for Q4 Measure Score', 'Four Quarter Average Score', 'Footnote for Four Quarter Average Score', 'Used in Quality Measure Five Star Rating', 'Measure Period', 'Location', 'Processing Date']
+2025-02-12 23:05:40,321 - INFO - nh_survey_raw: shape=(44189, 41), columns=['CMS Certification Number (CCN)', 'Provider Name', 'Provider Address', 'City/Town', 'State', 'ZIP Code', 'Inspection Cycle', 'Health Survey Date', 'Fire Safety Survey Date', 'Total Number of Health Deficiencies', 'Total Number of Fire Safety Deficiencies', 'Count of Freedom from Abuse and Neglect and Exploitation Deficiencies', 'Count of Quality of Life and Care Deficiencies', 'Count of Resident Assessment and Care Planning Deficiencies', 'Count of Nursing and Physician Services Deficiencies', 'Count of Resident Rights Deficiencies', 'Count of Nutrition and Dietary Deficiencies', 'Count of Pharmacy Service Deficiencies', 'Count of Environmental Deficiencies', 'Count of Administration Deficiencies', 'Count of Infection Control Deficiencies', 'Count of Emergency Preparedness Deficiencies', 'Count of Automatic Sprinkler Systems Deficiencies', 'Count of Construction Deficiencies', 'Count of Services Deficiencies', 'Count of Corridor Walls and Doors Deficiencies', 'Count of Egress Deficiencies', 'Count of Electrical Deficiencies', 'Count of Emergency Plans and Fire Drills Deficiencies', 'Count of Fire Alarm Systems Deficiencies', 'Count of Smoke Deficiencies', 'Count of Interior Deficiencies', 'Count of Gas and Vacuum and Electrical Systems Deficiencies', 'Count of Hazardous Area Deficiencies', 'Count of Illumination and Emergency Power Deficiencies', 'Count of Laboratories Deficiencies', 'Count of Medical Gases and Anaesthetizing Areas Deficiencies', 'Count of Smoking Regulations Deficiencies', 'Count of Miscellaneous Deficiencies', 'Location', 'Processing Date']
+2025-02-12 23:05:40,321 - INFO - pbj_non_nurse_raw: shape=(1325324, 82), columns=['PROVNUM', 'PROVNAME', 'CITY', 'STATE', 'COUNTY_NAME', 'COUNTY_FIPS', 'CY_Qtr', 'WorkDate', 'MDScensus', 'Hrs_Admin', 'Hrs_Admin_emp', 'Hrs_Admin_ctr', 'Hrs_Admin_fn', 'Hrs_MedDir', 'Hrs_MedDir_emp', 'Hrs_MedDir_ctr', 'Hrs_OthMD', 'Hrs_OthMD_emp', 'Hrs_OthMD_ctr', 'Hrs_PA', 'Hrs_PA_emp', 'Hrs_PA_ctr', 'Hrs_NP', 'Hrs_NP_emp', 'Hrs_NP_ctr', 'Hrs_ClinNrsSpec', 'Hrs_ClinNrsSpec_emp', 'Hrs_ClinNrsSpec_ctr', 'Hrs_Pharmacist', 'Hrs_Pharmacist_emp', 'Hrs_Pharmacist_ctr', 'Hrs_Dietician', 'Hrs_Dietician_emp', 'Hrs_Dietician_ctr', 'Hrs_FeedAsst', 'Hrs_FeedAsst_emp', 'Hrs_FeedAsst_ctr', 'Hrs_OT', 'Hrs_OT_emp', 'Hrs_OT_ctr', 'Hrs_OTasst', 'Hrs_OTasst_emp', 'Hrs_OTasst_ctr', 'Hrs_OTaide', 'Hrs_OTaide_emp', 'Hrs_OTaide_ctr', 'Hrs_PT', 'Hrs_PT_emp', 'Hrs_PT_ctr', 'Hrs_PTasst', 'Hrs_PTasst_emp', 'Hrs_PTasst_ctr', 'Hrs_PTaide', 'Hrs_PTaide_emp', 'Hrs_PTaide_ctr', 'Hrs_RespTher', 'Hrs_RespTher_emp', 'Hrs_RespTher_ctr', 'Hrs_RespTech', 'Hrs_RespTech_emp', 'Hrs_RespTech_ctr', 'Hrs_SpcLangPath', 'Hrs_SpcLangPath_emp', 'Hrs_SpcLangPath_ctr', 'Hrs_TherRecSpec', 'Hrs_TherRecSpec_emp', 'Hrs_TherRecSpec_ctr', 'Hrs_QualActvProf', 'Hrs_QualActvProf_emp', 'Hrs_QualActvProf_ctr', 'Hrs_OthActv', 'Hrs_OthActv_emp', 'Hrs_OthActv_ctr', 'Hrs_QualSocWrk', 'Hrs_QualSocWrk_emp', 'Hrs_QualSocWrk_ctr', 'Hrs_OthSocWrk', 'Hrs_OthSocWrk_emp', 'Hrs_OthSocWrk_ctr', 'Hrs_MHSvc', 'Hrs_MHSvc_emp', 'Hrs_MHSvc_ctr']
+2025-02-12 23:05:40,321 - INFO - pbj_nurse_raw: shape=(1325324, 33), columns=['PROVNUM', 'PROVNAME', 'CITY', 'STATE', 'COUNTY_NAME', 'COUNTY_FIPS', 'CY_Qtr', 'WorkDate', 'MDScensus', 'Hrs_RNDON', 'Hrs_RNDON_emp', 'Hrs_RNDON_ctr', 'Hrs_RNadmin', 'Hrs_RNadmin_emp', 'Hrs_RNadmin_ctr', 'Hrs_RN', 'Hrs_RN_emp', 'Hrs_RN_ctr', 'Hrs_LPNadmin', 'Hrs_LPNadmin_emp', 'Hrs_LPNadmin_ctr', 'Hrs_LPN', 'Hrs_LPN_emp', 'Hrs_LPN_ctr', 'Hrs_CNA', 'Hrs_CNA_emp', 'Hrs_CNA_ctr', 'Hrs_NAtrn', 'Hrs_NAtrn_emp', 'Hrs_NAtrn_ctr', 'Hrs_MedAide', 'Hrs_MedAide_emp', 'Hrs_MedAide_ctr']
+2025-02-12 23:05:40,321 - INFO - qrp_provider_raw: shape=(710016, 16), columns=['CMS Certification Number (CCN)', 'Provider Name', 'Address Line 1', 'City/Town', 'State', 'ZIP Code', 'County/Parish', 'Telephone Number', 'CMS Region', 'Measure Code', 'Score', 'Footnote', 'Start Date', 'End Date', 'Measure Date Range', 'LOCATION1']
+2025-02-12 23:05:40,321 - INFO - === Raw Data Verification - Load Step Completed ===
+2025-02-12 23:05:40,327 - INFO - === Data Quality Checks for nh_citations_raw ===
+2025-02-12 23:05:40,524 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:40,525 - INFO - CMS Certification Number (CCN)                0
+Provider Name                                 0
+Provider Address                              0
+City/Town                                     0
+State                                         0
+ZIP Code                                      0
+Survey Date                                   0
+Survey Type                                   0
+Deficiency Prefix                             0
+Deficiency Category                           0
+Deficiency Tag Number                         0
+Deficiency Description                        0
+Scope Severity Code                           0
+Deficiency Corrected                          0
+Correction Date                            1392
+Inspection Cycle                              0
+Standard Deficiency                           0
+Complaint Deficiency                          0
+Infection Control Inspection Deficiency       0
+Citation under IDR                            0
+Citation under IIDR                           0
+Location                                      0
+Processing Date                               0
+dtype: int64
+2025-02-12 23:05:41,036 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:41,066 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:41,068 - INFO - ZIP Code  Deficiency Tag Number  Inspection Cycle
+count  406789.000000          406789.000000     406789.000000
+mean    54492.822982             709.477156          1.958423
+std     28369.178174             102.584999          0.812428
+min       660.000000             151.000000          1.000000
+25%     31040.000000             641.000000          1.000000
+50%     55077.000000             689.000000          2.000000
+75%     78052.000000             761.000000          3.000000
+max     99929.000000             949.000000          3.000000
+2025-02-12 23:05:41,068 - INFO - === Data Quality Checks for nh_ownership_raw ===
+2025-02-12 23:05:41,111 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:41,112 - INFO - CMS Certification Number (CCN)                   0
+Provider Name                                    0
+Provider Address                                 0
+City/Town                                        0
+State                                            0
+ZIP Code                                         0
+Role played by Owner or Manager in Facility      0
+Owner Type                                     595
+Owner Name                                     595
+Ownership Percentage                           595
+Association Date                               595
+Location                                         0
+Processing Date                                  0
+dtype: int64
+2025-02-12 23:05:41,224 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:41,229 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:41,229 - INFO - ZIP Code
+count  144651.000000
+mean    49603.405237
+std     26783.368229
+min       660.000000
+25%     28655.000000
+50%     47532.000000
+75%     71203.000000
+max     99929.000000
+2025-02-12 23:05:41,229 - INFO - === Data Quality Checks for nh_quality_mds_raw ===
+2025-02-12 23:05:41,300 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:41,301 - INFO - CMS Certification Number (CCN)                   0
+Provider Name                                    0
+Provider Address                                 0
+City/Town                                        0
+State                                            0
+ZIP Code                                         0
+Measure Code                                     0
+Measure Description                              0
+Resident type                                    0
+Q1 Measure Score                             64416
+Footnote for Q1 Measure Score               187048
+Q2 Measure Score                             30096
+Footnote for Q2 Measure Score               221368
+Q3 Measure Score                             29209
+Footnote for Q3 Measure Score               222255
+Q4 Measure Score                             28945
+Footnote for Q4 Measure Score               222519
+Four Quarter Average Score                    8775
+Footnote for Four Quarter Average Score     242689
+Used in Quality Measure Five Star Rating         0
+Measure Period                                   0
+Location                                         0
+Processing Date                                  0
+dtype: int64
+2025-02-12 23:05:41,543 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:41,668 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:41,671 - INFO - ZIP Code   Measure Code  Q1 Measure Score  \
+count  251464.000000  251464.000000     187048.000000   
+mean    50343.823486     431.235294         29.152946   
+std     26875.320747      27.061051         38.566512   
+min       660.000000     401.000000          0.000000   
+25%     29732.000000     408.000000          0.964827   
+50%     48519.000000     419.000000          6.583004   
+75%     73045.750000     452.000000         64.814815   
+max     99929.000000     480.000000        100.000000   
+
+       Footnote for Q1 Measure Score  Q2 Measure Score  \
+count                   64416.000000     221368.000000   
+mean                        9.057004         28.301362   
+std                         0.740011         36.190215   
+min                         9.000000          0.000000   
+25%                         9.000000          1.754386   
+50%                         9.000000          9.677419   
+75%                         9.000000         39.062500   
+max                        21.000000        100.000000   
+
+       Footnote for Q2 Measure Score  Q3 Measure Score  \
+count                   30096.000000     222255.000000   
+mean                        9.119717         28.010306   
+std                         1.078166         36.341175   
+min                         9.000000          0.000000   
+25%                         9.000000          1.642325   
+50%                         9.000000          9.090909   
+75%                         9.000000         37.837838   
+max                        21.000000        100.000000   
+
+       Footnote for Q3 Measure Score  Q4 Measure Score  \
+count                   29209.000000     222519.000000   
+mean                        9.121504         27.763505   
+std                         1.093571         36.364891   
+min                         9.000000          0.000000   
+25%                         9.000000          1.562500   
+50%                         9.000000          8.695652   
+75%                         9.000000         37.254902   
+max                        21.000000        100.000000   
+
+       Footnote for Q4 Measure Score  Four Quarter Average Score  \
+count                   28945.000000               242689.000000   
+mean                        9.111695                   27.987423   
+std                         1.094674                   35.580175   
+min                         9.000000                    0.000000   
+25%                         9.000000                    2.020202   
+50%                         9.000000                    9.864886   
+75%                         9.000000                   36.609312   
+max                        21.000000                  100.000000   
+
+       Footnote for Four Quarter Average Score  
+count                              8775.000000  
+mean                                  9.358519  
+std                                   1.963599  
+min                                   9.000000  
+25%                                   9.000000  
+50%                                   9.000000  
+75%                                   9.000000  
+max                                  21.000000
+2025-02-12 23:05:41,671 - INFO - === Data Quality Checks for nh_survey_raw ===
+2025-02-12 23:05:41,683 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:41,683 - INFO - CMS Certification Number (CCN)                                            0
+Provider Name                                                             0
+Provider Address                                                          0
+City/Town                                                                 0
+State                                                                     0
+ZIP Code                                                                  0
+Inspection Cycle                                                          0
+Health Survey Date                                                        0
+Fire Safety Survey Date                                                  33
+Total Number of Health Deficiencies                                       0
+Total Number of Fire Safety Deficiencies                                 33
+Count of Freedom from Abuse and Neglect and Exploitation Deficiencies     0
+Count of Quality of Life and Care Deficiencies                            0
+Count of Resident Assessment and Care Planning Deficiencies               0
+Count of Nursing and Physician Services Deficiencies                      0
+Count of Resident Rights Deficiencies                                     0
+Count of Nutrition and Dietary Deficiencies                               0
+Count of Pharmacy Service Deficiencies                                    0
+Count of Environmental Deficiencies                                       0
+Count of Administration Deficiencies                                      0
+Count of Infection Control Deficiencies                                   0
+Count of Emergency Preparedness Deficiencies                             33
+Count of Automatic Sprinkler Systems Deficiencies                        33
+Count of Construction Deficiencies                                       33
+Count of Services Deficiencies                                           33
+Count of Corridor Walls and Doors Deficiencies                           33
+Count of Egress Deficiencies                                             33
+Count of Electrical Deficiencies                                         33
+Count of Emergency Plans and Fire Drills Deficiencies                    33
+Count of Fire Alarm Systems Deficiencies                                 33
+Count of Smoke Deficiencies                                              33
+Count of Interior Deficiencies                                           33
+Count of Gas and Vacuum and Electrical Systems Deficiencies              33
+Count of Hazardous Area Deficiencies                                     33
+Count of Illumination and Emergency Power Deficiencies                   33
+Count of Laboratories Deficiencies                                       33
+Count of Medical Gases and Anaesthetizing Areas Deficiencies             33
+Count of Smoking Regulations Deficiencies                                33
+Count of Miscellaneous Deficiencies                                      33
+Location                                                                  0
+Processing Date                                                           0
+dtype: int64
+2025-02-12 23:05:41,724 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:41,777 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:41,782 - INFO - ZIP Code  Inspection Cycle  Total Number of Health Deficiencies  \
+count  44189.000000      44189.000000                         44189.000000   
+mean   50339.324809          1.997013                             7.014710   
+std    26891.348600          0.816399                             6.023656   
+min      660.000000          1.000000                             0.000000   
+25%    29720.000000          1.000000                             3.000000   
+50%    48602.000000          2.000000                             6.000000   
+75%    73049.000000          3.000000                            10.000000   
+max    99929.000000          3.000000                            70.000000   
+
+       Total Number of Fire Safety Deficiencies  \
+count                              44156.000000   
+mean                                   4.520405   
+std                                    4.572814   
+min                                    0.000000   
+25%                                    1.000000   
+50%                                    3.000000   
+75%                                    7.000000   
+max                                   44.000000   
+
+       Count of Freedom from Abuse and Neglect and Exploitation Deficiencies  \
+count                                       44189.000000                       
+mean                                            0.283306                       
+std                                             0.698449                       
+min                                             0.000000                       
+25%                                             0.000000                       
+50%                                             0.000000                       
+75%                                             0.000000                       
+max                                             7.000000                       
+
+       Count of Quality of Life and Care Deficiencies  \
+count                                    44189.000000   
+mean                                         1.755301   
+std                                          1.912846   
+min                                          0.000000   
+25%                                          0.000000   
+50%                                          1.000000   
+75%                                          3.000000   
+max                                         19.000000   
+
+       Count of Resident Assessment and Care Planning Deficiencies  \
+count                                       44189.000000             
+mean                                            1.096359             
+std                                             1.333293             
+min                                             0.000000             
+25%                                             0.000000             
+50%                                             1.000000             
+75%                                             2.000000             
+max                                            11.000000             
+
+       Count of Nursing and Physician Services Deficiencies  \
+count                                       44189.000000      
+mean                                            0.249270      
+std                                             0.588568      
+min                                             0.000000      
+25%                                             0.000000      
+50%                                             0.000000      
+75%                                             0.000000      
+max                                             8.000000      
+
+       Count of Resident Rights Deficiencies  \
+count                           44189.000000   
+mean                                1.066442   
+std                                 1.423154   
+min                                 0.000000   
+25%                                 0.000000   
+50%                                 1.000000   
+75%                                 2.000000   
+max                                17.000000   
+
+       Count of Nutrition and Dietary Deficiencies  ...  \
+count                                 44189.000000  ...   
+mean                                      0.732943  ...   
+std                                       0.995185  ...   
+min                                       0.000000  ...   
+25%                                       0.000000  ...   
+50%                                       0.000000  ...   
+75%                                       1.000000  ...   
+max                                      11.000000  ...   
+
+       Count of Fire Alarm Systems Deficiencies  Count of Smoke Deficiencies  \
+count                                   44156.0                 44156.000000   
+mean                                        0.0                     1.759987   
+std                                         0.0                     1.835830   
+min                                         0.0                     0.000000   
+25%                                         0.0                     0.000000   
+50%                                         0.0                     1.000000   
+75%                                         0.0                     3.000000   
+max                                         0.0                    13.000000   
+
+       Count of Interior Deficiencies  \
+count                    44156.000000   
+mean                         0.000045   
+std                          0.006730   
+min                          0.000000   
+25%                          0.000000   
+50%                          0.000000   
+75%                          0.000000   
+max                          1.000000   
+
+       Count of Gas and Vacuum and Electrical Systems Deficiencies  \
+count                                       44156.000000             
+mean                                            0.814340             
+std                                             1.050809             
+min                                             0.000000             
+25%                                             0.000000             
+50%                                             0.000000             
+75%                                             1.000000             
+max                                             8.000000             
+
+       Count of Hazardous Area Deficiencies  \
+count                          44156.000000   
+mean                               0.000023   
+std                                0.004759   
+min                                0.000000   
+25%                                0.000000   
+50%                                0.000000   
+75%                                0.000000   
+max                                1.000000   
+
+       Count of Illumination and Emergency Power Deficiencies  \
+count                                       44156.000000        
+mean                                            0.000023        
+std                                             0.004759        
+min                                             0.000000        
+25%                                             0.000000        
+50%                                             0.000000        
+75%                                             0.000000        
+max                                             1.000000        
+
+       Count of Laboratories Deficiencies  \
+count                             44156.0   
+mean                                  0.0   
+std                                   0.0   
+min                                   0.0   
+25%                                   0.0   
+50%                                   0.0   
+75%                                   0.0   
+max                                   0.0   
+
+       Count of Medical Gases and Anaesthetizing Areas Deficiencies  \
+count                                       44156.000000              
+mean                                            0.000045              
+std                                             0.006730              
+min                                             0.000000              
+25%                                             0.000000              
+50%                                             0.000000              
+75%                                             0.000000              
+max                                             1.000000              
+
+       Count of Smoking Regulations Deficiencies  \
+count                                    44156.0   
+mean                                         0.0   
+std                                          0.0   
+min                                          0.0   
+25%                                          0.0   
+50%                                          0.0   
+75%                                          0.0   
+max                                          0.0   
+
+       Count of Miscellaneous Deficiencies  
+count                         44156.000000  
+mean                              0.466800  
+std                               0.766179  
+min                               0.000000  
+25%                               0.000000  
+50%                               0.000000  
+75%                               1.000000  
+max                               7.000000  
+
+[8 rows x 32 columns]
+2025-02-12 23:05:41,782 - INFO - === Data Quality Checks for pbj_non_nurse_raw ===
+2025-02-12 23:05:42,098 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:42,098 - INFO - PROVNUM              0
+PROVNAME             0
+CITY                 0
+STATE                0
+COUNTY_NAME          0
+                    ..
+Hrs_OthSocWrk_emp    0
+Hrs_OthSocWrk_ctr    0
+Hrs_MHSvc            0
+Hrs_MHSvc_emp        0
+Hrs_MHSvc_ctr        0
+Length: 82, dtype: int64
+2025-02-12 23:05:44,317 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:47,476 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:47,482 - INFO - COUNTY_FIPS      WorkDate     MDScensus     Hrs_Admin  Hrs_Admin_emp  \
+count  1.325324e+06  1.325324e+06  1.325324e+06  1.319227e+06   1.319227e+06   
+mean   9.113430e+01  2.024052e+07  8.341670e+01  5.415150e+00   5.282056e+00   
+std    9.912806e+01  8.167078e+01  4.904109e+01  4.642567e+00   4.643081e+00   
+min    1.000000e+00  2.024040e+07  0.000000e+00  0.000000e+00   0.000000e+00   
+25%    3.100000e+01  2.024042e+07  5.100000e+01  0.000000e+00   0.000000e+00   
+50%    6.900000e+01  2.024052e+07  7.600000e+01  8.000000e+00   8.000000e+00   
+75%    1.170000e+02  2.024061e+07  1.040000e+02  8.000000e+00   8.000000e+00   
+max    8.400000e+02  2.024063e+07  7.420000e+02  6.800000e+01   4.525000e+01   
+
+       Hrs_Admin_ctr  Hrs_Admin_fn    Hrs_MedDir  Hrs_MedDir_emp  \
+count   1.319227e+06        6097.0  1.325324e+06    1.325324e+06   
+mean    1.330937e-01           1.0  3.762991e-01    7.830458e-02   
+std     1.072293e+00           0.0  1.460066e+00    7.513089e-01   
+min     0.000000e+00           1.0  0.000000e+00    0.000000e+00   
+25%     0.000000e+00           1.0  0.000000e+00    0.000000e+00   
+50%     0.000000e+00           1.0  0.000000e+00    0.000000e+00   
+75%     0.000000e+00           1.0  0.000000e+00    0.000000e+00   
+max     6.800000e+01           1.0  6.125000e+01    6.125000e+01   
+
+       Hrs_MedDir_ctr  ...  Hrs_OthActv_ctr  Hrs_QualSocWrk  \
+count    1.325324e+06  ...     1.325324e+06    1.325324e+06   
+mean     2.979946e-01  ...     1.181517e-01    4.373406e+00   
+std      1.259352e+00  ...     2.033839e+00    6.575853e+00   
+min      0.000000e+00  ...     0.000000e+00    0.000000e+00   
+25%      0.000000e+00  ...     0.000000e+00    0.000000e+00   
+50%      0.000000e+00  ...     0.000000e+00    0.000000e+00   
+75%      0.000000e+00  ...     0.000000e+00    8.000000e+00   
+max      3.900000e+01  ...     1.092500e+02    9.075000e+01   
+
+       Hrs_QualSocWrk_emp  Hrs_QualSocWrk_ctr  Hrs_OthSocWrk  \
+count        1.325324e+06        1.325324e+06   1.325324e+06   
+mean         4.342660e+00        3.074557e-02   3.107487e+00   
+std          6.537645e+00        5.176069e-01   6.729960e+00   
+min          0.000000e+00        0.000000e+00   0.000000e+00   
+25%          0.000000e+00        0.000000e+00   0.000000e+00   
+50%          0.000000e+00        0.000000e+00   0.000000e+00   
+75%          8.000000e+00        0.000000e+00   5.960000e+00   
+max          9.075000e+01        3.180000e+01   2.007800e+02   
+
+       Hrs_OthSocWrk_emp  Hrs_OthSocWrk_ctr     Hrs_MHSvc  Hrs_MHSvc_emp  \
+count       1.325324e+06       1.325324e+06  1.325324e+06   1.325324e+06   
+mean        3.091622e+00       1.586563e-02  3.314399e-01   3.030647e-01   
+std         6.698340e+00       6.564691e-01  4.929164e+00   4.847544e+00   
+min         0.000000e+00       0.000000e+00  0.000000e+00   0.000000e+00   
+25%         0.000000e+00       0.000000e+00  0.000000e+00   0.000000e+00   
+50%         0.000000e+00       0.000000e+00  0.000000e+00   0.000000e+00   
+75%         5.770000e+00       0.000000e+00  0.000000e+00   0.000000e+00   
+max         2.007800e+02       1.010000e+02  3.942700e+02   3.872700e+02   
+
+       Hrs_MHSvc_ctr  
+count   1.325324e+06  
+mean    2.837520e-02  
+std     4.830650e-01  
+min     0.000000e+00  
+25%     0.000000e+00  
+50%     0.000000e+00  
+75%     0.000000e+00  
+max     4.100000e+01  
+
+[8 rows x 76 columns]
+2025-02-12 23:05:47,482 - INFO - === Data Quality Checks for pbj_nurse_raw ===
+2025-02-12 23:05:47,738 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:47,738 - INFO - PROVNUM             0
+PROVNAME            0
+CITY                0
+STATE               0
+COUNTY_NAME         0
+COUNTY_FIPS         0
+CY_Qtr              0
+WorkDate            0
+MDScensus           0
+Hrs_RNDON           0
+Hrs_RNDON_emp       0
+Hrs_RNDON_ctr       0
+Hrs_RNadmin         0
+Hrs_RNadmin_emp     0
+Hrs_RNadmin_ctr     0
+Hrs_RN              0
+Hrs_RN_emp          0
+Hrs_RN_ctr          0
+Hrs_LPNadmin        0
+Hrs_LPNadmin_emp    0
+Hrs_LPNadmin_ctr    0
+Hrs_LPN             0
+Hrs_LPN_emp         0
+Hrs_LPN_ctr         0
+Hrs_CNA             0
+Hrs_CNA_emp         0
+Hrs_CNA_ctr         0
+Hrs_NAtrn           0
+Hrs_NAtrn_emp       0
+Hrs_NAtrn_ctr       0
+Hrs_MedAide         0
+Hrs_MedAide_emp     0
+Hrs_MedAide_ctr     0
+dtype: int64
+2025-02-12 23:05:48,997 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:50,059 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:50,065 - INFO - COUNTY_FIPS      WorkDate     MDScensus     Hrs_RNDON  Hrs_RNDON_emp  \
+count  1.325324e+06  1.325324e+06  1.325324e+06  1.325324e+06   1.325324e+06   
+mean   9.113430e+01  2.024052e+07  8.341670e+01  5.195887e+00   5.099312e+00   
+std    9.912806e+01  8.167078e+01  4.904109e+01  4.389664e+00   4.382255e+00   
+min    1.000000e+00  2.024040e+07  0.000000e+00  0.000000e+00   0.000000e+00   
+25%    3.100000e+01  2.024042e+07  5.100000e+01  0.000000e+00   0.000000e+00   
+50%    6.900000e+01  2.024052e+07  7.600000e+01  8.000000e+00   8.000000e+00   
+75%    1.170000e+02  2.024061e+07  1.040000e+02  8.000000e+00   8.000000e+00   
+max    8.400000e+02  2.024063e+07  7.420000e+02  1.039600e+02   1.039600e+02   
+
+       Hrs_RNDON_ctr   Hrs_RNadmin  Hrs_RNadmin_emp  Hrs_RNadmin_ctr  \
+count   1.325324e+06  1.325324e+06     1.325324e+06     1.325324e+06   
+mean    9.657448e-02  1.026275e+01     1.001164e+01     2.511122e-01   
+std     9.182349e-01  1.476875e+01     1.455953e+01     1.845270e+00   
+min     0.000000e+00  0.000000e+00     0.000000e+00     0.000000e+00   
+25%     0.000000e+00  0.000000e+00     0.000000e+00     0.000000e+00   
+50%     0.000000e+00  7.500000e+00     7.500000e+00     0.000000e+00   
+75%     0.000000e+00  1.600000e+01     1.600000e+01     0.000000e+00   
+max     2.575000e+01  2.755000e+02     2.755000e+02     8.725000e+01   
+
+             Hrs_RN  ...   Hrs_LPN_ctr       Hrs_CNA   Hrs_CNA_emp  \
+count  1.325324e+06  ...  1.325324e+06  1.325324e+06  1.325324e+06   
+mean   3.480192e+01  ...  6.133439e+00  1.737908e+02  1.616093e+02   
+std    3.532269e+01  ...  1.963754e+01  1.151591e+02  1.081243e+02   
+min    0.000000e+00  ...  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    1.325000e+01  ...  0.000000e+00  9.857000e+01  9.025000e+01   
+50%    2.575000e+01  ...  0.000000e+00  1.506200e+02  1.400000e+02   
+75%    4.525000e+01  ...  4.000000e+00  2.200000e+02  2.074800e+02   
+max    9.159800e+02  ...  1.380150e+04  1.758100e+03  1.503630e+03   
+
+        Hrs_CNA_ctr     Hrs_NAtrn  Hrs_NAtrn_emp  Hrs_NAtrn_ctr   Hrs_MedAide  \
+count  1.325324e+06  1.325324e+06   1.325324e+06   1.325324e+06  1.325324e+06   
+mean   1.218150e+01  4.314155e+00   4.262067e+00   5.208815e-02  8.578327e+00   
+std    3.184142e+01  1.336067e+01   1.302080e+01   2.011555e+00  1.785970e+01   
+min    0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00   
+25%    0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00   
+50%    0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00   
+75%    8.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  1.131000e+01   
+max    6.614200e+02  4.437500e+02   4.387500e+02   2.470000e+02  4.298000e+02   
+
+       Hrs_MedAide_emp  Hrs_MedAide_ctr  
+count     1.325324e+06     1.325324e+06  
+mean      8.363303e+00     2.150232e-01  
+std       1.749784e+01     2.104964e+00  
+min       0.000000e+00     0.000000e+00  
+25%       0.000000e+00     0.000000e+00  
+50%       0.000000e+00     0.000000e+00  
+75%       1.087000e+01     0.000000e+00  
+max       4.298000e+02     8.775000e+01  
+
+[8 rows x 27 columns]
+2025-02-12 23:05:50,065 - INFO - === Data Quality Checks for qrp_provider_raw ===
+2025-02-12 23:05:50,312 - INFO - Missing Value Counts per Column:
+2025-02-12 23:05:50,312 - INFO - CMS Certification Number (CCN)    0
+Provider Name                     0
+Address Line 1                    0
+City/Town                         0
+State                             0
+ZIP Code                          0
+County/Parish                     0
+Telephone Number                  0
+CMS Region                        0
+Measure Code                      0
+Score                             0
+Footnote                          0
+Start Date                        0
+End Date                          0
+Measure Date Range                0
+LOCATION1                         0
+dtype: int64
+2025-02-12 23:05:50,872 - INFO - Number of Duplicate Rows: 0
+2025-02-12 23:05:50,905 - INFO - Basic Stats for Numeric Columns:
+2025-02-12 23:05:50,905 - INFO - ZIP Code     CMS Region
+count  710016.000000  710016.000000
+mean    50343.823486       5.190576
+std     26875.286236       2.249510
+min       660.000000       1.000000
+25%     29732.000000       4.000000
+50%     48519.000000       5.000000
+75%     73045.750000       7.000000
+max     99929.000000      10.000000
+2025-02-12 23:05:50,906 - INFO - === Raw Data Verification - Basic Checks Completed ===
+2025-02-12 23:05:50,912 - INFO - Comparing pbj_nurse_raw to preprocessed 'pbj_nurse':
+2025-02-12 23:05:50,912 - INFO - Raw shape:          (1325324, 33)
+2025-02-12 23:05:50,912 - INFO - Preprocessed shape: (1325324, 33)
+2025-02-12 23:05:50,912 - INFO - => Shapes match exactly!
+2025-02-12 23:05:50,912 - INFO - Comparing pbj_non_nurse_raw to preprocessed 'pbj_non_nurse':
+2025-02-12 23:05:50,912 - INFO - Raw shape:          (1325324, 82)
+2025-02-12 23:05:50,912 - INFO - Preprocessed shape: (1325324, 82)
+2025-02-12 23:05:50,912 - INFO - => Shapes match exactly!
+2025-02-12 23:05:50,912 - INFO - Comparing qrp_provider_raw to preprocessed 'qrp_provider':
+2025-02-12 23:05:50,912 - INFO - Raw shape:          (710016, 16)
+2025-02-12 23:05:50,912 - INFO - Preprocessed shape: (710016, 16)
+2025-02-12 23:05:50,912 - INFO - => Shapes match exactly!
+2025-02-12 23:05:50,912 - INFO - Comparing nh_survey_raw to preprocessed 'nh_survey':
+2025-02-12 23:05:50,912 - INFO - Raw shape:          (44189, 41)
+2025-02-12 23:05:50,912 - INFO - Preprocessed shape: (44189, 41)
+2025-02-12 23:05:50,912 - INFO - => Shapes match exactly!
+2025-02-12 23:05:50,913 - INFO - Comparing nh_quality_mds_raw to preprocessed 'nh_quality_mds':
+2025-02-12 23:05:50,913 - INFO - Raw shape:          (251464, 23)
+2025-02-12 23:05:50,913 - INFO - Preprocessed shape: (251464, 23)
+2025-02-12 23:05:50,913 - INFO - => Shapes match exactly!
+2025-02-12 23:05:50,913 - INFO - Comparing nh_ownership_raw to preprocessed 'nh_ownership':
+2025-02-12 23:05:50,913 - INFO - Raw shape:          (144651, 13)
+2025-02-12 23:05:50,913 - INFO - Preprocessed shape: (144651, 13)
+2025-02-12 23:05:50,913 - INFO - => Shapes match exactly!
+2025-02-12 23:05:50,913 - INFO - Comparing nh_citations_raw to preprocessed 'nh_citations':
+2025-02-12 23:05:50,913 - INFO - Raw shape:          (406789, 23)
+2025-02-12 23:05:50,913 - INFO - Preprocessed shape: (406789, 23)
+2025-02-12 23:05:50,913 - INFO - => Shapes match exactly!

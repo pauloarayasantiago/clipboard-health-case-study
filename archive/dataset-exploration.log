@@ -1,0 +1,1749 @@
+2025-02-13 22:03:18,219 - INFO - === Exploration Phase Notebook: Logging Setup Complete ===
+2025-02-13 22:03:19,020 - INFO - Loaded pbj_nurse with shape (1325324, 33)
+2025-02-13 22:03:19,348 - INFO - Loaded pbj_non_nurse with shape (1325324, 82)
+2025-02-13 22:03:19,634 - INFO - Loaded qrp_provider with shape (710016, 16)
+2025-02-13 22:03:19,656 - INFO - Loaded nh_survey with shape (44189, 41)
+2025-02-13 22:03:19,756 - INFO - Loaded nh_quality_mds with shape (251464, 23)
+2025-02-13 22:03:19,829 - INFO - Loaded nh_ownership with shape (144651, 13)
+2025-02-13 22:03:20,078 - INFO - Loaded nh_citations with shape (406789, 23)
+2025-02-13 22:03:20,081 - INFO - Columns in pbj_nurse:
+2025-02-13 22:03:20,081 - INFO - ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_rndon', 'hrs_rndon_emp', 'hrs_rndon_ctr', 'hrs_rnadmin', 'hrs_rnadmin_emp', 'hrs_rnadmin_ctr', 'hrs_rn', 'hrs_rn_emp', 'hrs_rn_ctr', 'hrs_lpnadmin', 'hrs_lpnadmin_emp', 'hrs_lpnadmin_ctr', 'hrs_lpn', 'hrs_lpn_emp', 'hrs_lpn_ctr', 'hrs_cna', 'hrs_cna_emp', 'hrs_cna_ctr', 'hrs_natrn', 'hrs_natrn_emp', 'hrs_natrn_ctr', 'hrs_medaide', 'hrs_medaide_emp', 'hrs_medaide_ctr']
+2025-02-13 22:06:53,233 - INFO - --- Dataset: pbj_nurse ---
+2025-02-13 22:06:53,233 - INFO - Shape: (1325324, 33)
+2025-02-13 22:06:53,233 - INFO - Columns: ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_rndon', 'hrs_rndon_emp', 'hrs_rndon_ctr', 'hrs_rnadmin', 'hrs_rnadmin_emp', 'hrs_rnadmin_ctr', 'hrs_rn', 'hrs_rn_emp', 'hrs_rn_ctr', 'hrs_lpnadmin', 'hrs_lpnadmin_emp', 'hrs_lpnadmin_ctr', 'hrs_lpn', 'hrs_lpn_emp', 'hrs_lpn_ctr', 'hrs_cna', 'hrs_cna_emp', 'hrs_cna_ctr', 'hrs_natrn', 'hrs_natrn_emp', 'hrs_natrn_ctr', 'hrs_medaide', 'hrs_medaide_emp', 'hrs_medaide_ctr']
+2025-02-13 22:06:53,247 - INFO - Data Types:
+provnum                     object
+provname                    object
+city                        object
+state                       object
+county_name                 object
+county_fips                  int64
+cy_qtr                      object
+workdate            datetime64[ns]
+mdscensus                    int64
+hrs_rndon                  float64
+hrs_rndon_emp              float64
+hrs_rndon_ctr              float64
+hrs_rnadmin                float64
+hrs_rnadmin_emp            float64
+hrs_rnadmin_ctr            float64
+hrs_rn                     float64
+hrs_rn_emp                 float64
+hrs_rn_ctr                 float64
+hrs_lpnadmin               float64
+hrs_lpnadmin_emp           float64
+hrs_lpnadmin_ctr           float64
+hrs_lpn                    float64
+hrs_lpn_emp                float64
+hrs_lpn_ctr                float64
+hrs_cna                    float64
+hrs_cna_emp                float64
+hrs_cna_ctr                float64
+hrs_natrn                  float64
+hrs_natrn_emp              float64
+hrs_natrn_ctr              float64
+hrs_medaide                float64
+hrs_medaide_emp            float64
+hrs_medaide_ctr            float64
+dtype: object
+2025-02-13 22:06:53,509 - INFO - Missing Values:
+provnum             0
+provname            0
+city                0
+state               0
+county_name         0
+county_fips         0
+cy_qtr              0
+workdate            0
+mdscensus           0
+hrs_rndon           0
+hrs_rndon_emp       0
+hrs_rndon_ctr       0
+hrs_rnadmin         0
+hrs_rnadmin_emp     0
+hrs_rnadmin_ctr     0
+hrs_rn              0
+hrs_rn_emp          0
+hrs_rn_ctr          0
+hrs_lpnadmin        0
+hrs_lpnadmin_emp    0
+hrs_lpnadmin_ctr    0
+hrs_lpn             0
+hrs_lpn_emp         0
+hrs_lpn_ctr         0
+hrs_cna             0
+hrs_cna_emp         0
+hrs_cna_ctr         0
+hrs_natrn           0
+hrs_natrn_emp       0
+hrs_natrn_ctr       0
+hrs_medaide         0
+hrs_medaide_emp     0
+hrs_medaide_ctr     0
+dtype: int64
+2025-02-13 22:06:53,509 - INFO - Total Missing Values: 0
+2025-02-13 22:06:54,835 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:06:55,892 - INFO - Descriptive Statistics (Numeric Columns):
+        county_fips     mdscensus     hrs_rndon  hrs_rndon_emp  hrs_rndon_ctr  \
+count  1.325324e+06  1.325324e+06  1.325324e+06   1.325324e+06   1.325324e+06   
+mean   9.113430e+01  8.341670e+01  5.195887e+00   5.099312e+00   9.657448e-02   
+std    9.912806e+01  4.904109e+01  4.389664e+00   4.382255e+00   9.182349e-01   
+min    1.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00   
+25%    3.100000e+01  5.100000e+01  0.000000e+00   0.000000e+00   0.000000e+00   
+50%    6.900000e+01  7.600000e+01  8.000000e+00   8.000000e+00   0.000000e+00   
+75%    1.170000e+02  1.040000e+02  8.000000e+00   8.000000e+00   0.000000e+00   
+max    8.400000e+02  7.420000e+02  1.039600e+02   1.039600e+02   2.575000e+01   
+
+        hrs_rnadmin  hrs_rnadmin_emp  hrs_rnadmin_ctr        hrs_rn  \
+count  1.325324e+06     1.325324e+06     1.325324e+06  1.325324e+06   
+mean   1.026275e+01     1.001164e+01     2.511122e-01  3.480192e+01   
+std    1.476875e+01     1.455953e+01     1.845270e+00  3.532269e+01   
+min    0.000000e+00     0.000000e+00     0.000000e+00  0.000000e+00   
+25%    0.000000e+00     0.000000e+00     0.000000e+00  1.325000e+01   
+50%    7.500000e+00     7.500000e+00     0.000000e+00  2.575000e+01   
+75%    1.600000e+01     1.600000e+01     0.000000e+00  4.525000e+01   
+max    2.755000e+02     2.755000e+02     8.725000e+01  9.159800e+02   
+
+         hrs_rn_emp  ...   hrs_lpn_ctr       hrs_cna   hrs_cna_emp  \
+count  1.325324e+06  ...  1.325324e+06  1.325324e+06  1.325324e+06   
+mean   3.199023e+01  ...  6.133439e+00  1.737908e+02  1.616093e+02   
+std    3.226092e+01  ...  1.963754e+01  1.151591e+02  1.081243e+02   
+min    0.000000e+00  ...  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    1.208000e+01  ...  0.000000e+00  9.857000e+01  9.025000e+01   
+50%    2.442000e+01  ...  0.000000e+00  1.506200e+02  1.400000e+02   
+75%    4.200000e+01  ...  4.000000e+00  2.200000e+02  2.074800e+02   
+max    8.879600e+02  ...  1.380150e+04  1.758100e+03  1.503630e+03   
+
+        hrs_cna_ctr     hrs_natrn  hrs_natrn_emp  hrs_natrn_ctr   hrs_medaide  \
+count  1.325324e+06  1.325324e+06   1.325324e+06   1.325324e+06  1.325324e+06   
+mean   1.218150e+01  4.314155e+00   4.262067e+00   5.208815e-02  8.578327e+00   
+std    3.184142e+01  1.336067e+01   1.302080e+01   2.011555e+00  1.785970e+01   
+min    0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00   
+25%    0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00   
+50%    0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  0.000000e+00   
+75%    8.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  1.131000e+01   
+max    6.614200e+02  4.437500e+02   4.387500e+02   2.470000e+02  4.298000e+02   
+
+       hrs_medaide_emp  hrs_medaide_ctr  
+count     1.325324e+06     1.325324e+06  
+mean      8.363303e+00     2.150232e-01  
+std       1.749784e+01     2.104964e+00  
+min       0.000000e+00     0.000000e+00  
+25%       0.000000e+00     0.000000e+00  
+50%       0.000000e+00     0.000000e+00  
+75%       1.087000e+01     0.000000e+00  
+max       4.298000e+02     8.775000e+01  
+
+[8 rows x 26 columns]
+2025-02-13 22:06:56,302 - INFO - Unique Value Counts for 'cy_qtr':
+cy_qtr
+2024Q2    1325324
+Name: count, dtype: int64
+2025-02-13 22:06:56,708 - INFO - First 5 Rows:
+  provnum                  provname          city state county_name  \
+0  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+1  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+2  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+3  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+4  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+
+   county_fips  cy_qtr   workdate  mdscensus  hrs_rndon  ...  hrs_lpn_ctr  \
+0           59  2024Q2 2024-04-01         51      10.77  ...          0.0   
+1           59  2024Q2 2024-04-02         52       8.43  ...          0.0   
+2           59  2024Q2 2024-04-03         53      11.13  ...          0.0   
+3           59  2024Q2 2024-04-04         52      12.27  ...          0.0   
+4           59  2024Q2 2024-04-05         52       4.95  ...          0.0   
+
+   hrs_cna  hrs_cna_emp  hrs_cna_ctr  hrs_natrn  hrs_natrn_emp  hrs_natrn_ctr  \
+0   160.08       160.08          0.0        0.0            0.0            0.0   
+1   135.95       135.95          0.0        0.0            0.0            0.0   
+2   150.31       150.31          0.0        0.0            0.0            0.0   
+3   133.01       133.01          0.0        0.0            0.0            0.0   
+4   137.92       137.92          0.0        0.0            0.0            0.0   
+
+   hrs_medaide  hrs_medaide_emp  hrs_medaide_ctr  
+0          0.0              0.0              0.0  
+1          0.0              0.0              0.0  
+2          0.0              0.0              0.0  
+3          0.0              0.0              0.0  
+4          0.0              0.0              0.0  
+
+[5 rows x 33 columns]
+2025-02-13 22:06:56,708 - INFO - --- End Dataset: pbj_nurse ---
+
+2025-02-13 22:06:56,708 - INFO - --- Dataset: pbj_non_nurse ---
+2025-02-13 22:06:56,708 - INFO - Shape: (1325324, 82)
+2025-02-13 22:06:56,708 - INFO - Columns: ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_admin', 'hrs_admin_emp', 'hrs_admin_ctr', 'hrs_admin_fn', 'hrs_meddir', 'hrs_meddir_emp', 'hrs_meddir_ctr', 'hrs_othmd', 'hrs_othmd_emp', 'hrs_othmd_ctr', 'hrs_pa', 'hrs_pa_emp', 'hrs_pa_ctr', 'hrs_np', 'hrs_np_emp', 'hrs_np_ctr', 'hrs_clinnrsspec', 'hrs_clinnrsspec_emp', 'hrs_clinnrsspec_ctr', 'hrs_pharmacist', 'hrs_pharmacist_emp', 'hrs_pharmacist_ctr', 'hrs_dietician', 'hrs_dietician_emp', 'hrs_dietician_ctr', 'hrs_feedasst', 'hrs_feedasst_emp', 'hrs_feedasst_ctr', 'hrs_ot', 'hrs_ot_emp', 'hrs_ot_ctr', 'hrs_otasst', 'hrs_otasst_emp', 'hrs_otasst_ctr', 'hrs_otaide', 'hrs_otaide_emp', 'hrs_otaide_ctr', 'hrs_pt', 'hrs_pt_emp', 'hrs_pt_ctr', 'hrs_ptasst', 'hrs_ptasst_emp', 'hrs_ptasst_ctr', 'hrs_ptaide', 'hrs_ptaide_emp', 'hrs_ptaide_ctr', 'hrs_respther', 'hrs_respther_emp', 'hrs_respther_ctr', 'hrs_resptech', 'hrs_resptech_emp', 'hrs_resptech_ctr', 'hrs_spclangpath', 'hrs_spclangpath_emp', 'hrs_spclangpath_ctr', 'hrs_therrecspec', 'hrs_therrecspec_emp', 'hrs_therrecspec_ctr', 'hrs_qualactvprof', 'hrs_qualactvprof_emp', 'hrs_qualactvprof_ctr', 'hrs_othactv', 'hrs_othactv_emp', 'hrs_othactv_ctr', 'hrs_qualsocwrk', 'hrs_qualsocwrk_emp', 'hrs_qualsocwrk_ctr', 'hrs_othsocwrk', 'hrs_othsocwrk_emp', 'hrs_othsocwrk_ctr', 'hrs_mhsvc', 'hrs_mhsvc_emp', 'hrs_mhsvc_ctr']
+2025-02-13 22:06:56,708 - INFO - Data Types:
+provnum               object
+provname              object
+city                  object
+state                 object
+county_name           object
+                      ...   
+hrs_othsocwrk_emp    float64
+hrs_othsocwrk_ctr    float64
+hrs_mhsvc            float64
+hrs_mhsvc_emp        float64
+hrs_mhsvc_ctr        float64
+Length: 82, dtype: object
+2025-02-13 22:06:57,069 - INFO - Missing Values:
+provnum              0
+provname             0
+city                 0
+state                0
+county_name          0
+                    ..
+hrs_othsocwrk_emp    0
+hrs_othsocwrk_ctr    0
+hrs_mhsvc            0
+hrs_mhsvc_emp        0
+hrs_mhsvc_ctr        0
+Length: 82, dtype: int64
+2025-02-13 22:06:57,069 - INFO - Total Missing Values: 1337518
+2025-02-13 22:06:59,401 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:07:02,416 - INFO - Descriptive Statistics (Numeric Columns):
+        county_fips     mdscensus     hrs_admin  hrs_admin_emp  hrs_admin_ctr  \
+count  1.325324e+06  1.325324e+06  1.319227e+06   1.319227e+06   1.319227e+06   
+mean   9.113430e+01  8.341670e+01  5.415150e+00   5.282056e+00   1.330937e-01   
+std    9.912806e+01  4.904109e+01  4.642567e+00   4.643081e+00   1.072293e+00   
+min    1.000000e+00  0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00   
+25%    3.100000e+01  5.100000e+01  0.000000e+00   0.000000e+00   0.000000e+00   
+50%    6.900000e+01  7.600000e+01  8.000000e+00   8.000000e+00   0.000000e+00   
+75%    1.170000e+02  1.040000e+02  8.000000e+00   8.000000e+00   0.000000e+00   
+max    8.400000e+02  7.420000e+02  6.800000e+01   4.525000e+01   6.800000e+01   
+
+       hrs_admin_fn    hrs_meddir  hrs_meddir_emp  hrs_meddir_ctr  \
+count        6097.0  1.325324e+06    1.325324e+06    1.325324e+06   
+mean            1.0  3.762991e-01    7.830458e-02    2.979946e-01   
+std             0.0  1.460066e+00    7.513089e-01    1.259352e+00   
+min             1.0  0.000000e+00    0.000000e+00    0.000000e+00   
+25%             1.0  0.000000e+00    0.000000e+00    0.000000e+00   
+50%             1.0  0.000000e+00    0.000000e+00    0.000000e+00   
+75%             1.0  0.000000e+00    0.000000e+00    0.000000e+00   
+max             1.0  6.125000e+01    6.125000e+01    3.900000e+01   
+
+          hrs_othmd  ...  hrs_othactv_ctr  hrs_qualsocwrk  hrs_qualsocwrk_emp  \
+count  1.325324e+06  ...     1.325324e+06    1.325324e+06        1.325324e+06   
+mean   1.628365e-01  ...     1.181517e-01    4.373406e+00        4.342660e+00   
+std    2.109054e+00  ...     2.033839e+00    6.575853e+00        6.537645e+00   
+min    0.000000e+00  ...     0.000000e+00    0.000000e+00        0.000000e+00   
+25%    0.000000e+00  ...     0.000000e+00    0.000000e+00        0.000000e+00   
+50%    0.000000e+00  ...     0.000000e+00    0.000000e+00        0.000000e+00   
+75%    0.000000e+00  ...     0.000000e+00    8.000000e+00        8.000000e+00   
+max    2.047500e+02  ...     1.092500e+02    9.075000e+01        9.075000e+01   
+
+       hrs_qualsocwrk_ctr  hrs_othsocwrk  hrs_othsocwrk_emp  \
+count        1.325324e+06   1.325324e+06       1.325324e+06   
+mean         3.074557e-02   3.107487e+00       3.091622e+00   
+std          5.176069e-01   6.729960e+00       6.698340e+00   
+min          0.000000e+00   0.000000e+00       0.000000e+00   
+25%          0.000000e+00   0.000000e+00       0.000000e+00   
+50%          0.000000e+00   0.000000e+00       0.000000e+00   
+75%          0.000000e+00   5.960000e+00       5.770000e+00   
+max          3.180000e+01   2.007800e+02       2.007800e+02   
+
+       hrs_othsocwrk_ctr     hrs_mhsvc  hrs_mhsvc_emp  hrs_mhsvc_ctr  
+count       1.325324e+06  1.325324e+06   1.325324e+06   1.325324e+06  
+mean        1.586563e-02  3.314399e-01   3.030647e-01   2.837520e-02  
+std         6.564691e-01  4.929164e+00   4.847544e+00   4.830650e-01  
+min         0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  
+25%         0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  
+50%         0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  
+75%         0.000000e+00  0.000000e+00   0.000000e+00   0.000000e+00  
+max         1.010000e+02  3.942700e+02   3.872700e+02   4.100000e+01  
+
+[8 rows x 75 columns]
+2025-02-13 22:07:02,785 - INFO - Unique Value Counts for 'cy_qtr':
+cy_qtr
+2024Q2    1325324
+Name: count, dtype: int64
+2025-02-13 22:07:02,873 - INFO - Unique Value Counts for 'hrs_admin_fn':
+hrs_admin_fn
+1.0    6097
+Name: count, dtype: int64
+2025-02-13 22:07:03,719 - INFO - First 5 Rows:
+  provnum                  provname          city state county_name  \
+0  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+1  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+2  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+3  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+4  015009  BURNS NURSING HOME, INC.  RUSSELLVILLE    AL    Franklin   
+
+   county_fips  cy_qtr   workdate  mdscensus  hrs_admin  ...  hrs_othactv_ctr  \
+0           59  2024Q2 2024-04-01         51        8.0  ...              0.0   
+1           59  2024Q2 2024-04-02         52        8.0  ...              0.0   
+2           59  2024Q2 2024-04-03         53        8.0  ...              0.0   
+3           59  2024Q2 2024-04-04         52        8.0  ...              0.0   
+4           59  2024Q2 2024-04-05         52        8.0  ...              0.0   
+
+   hrs_qualsocwrk  hrs_qualsocwrk_emp  hrs_qualsocwrk_ctr  hrs_othsocwrk  \
+0            6.65                6.65                 0.0            0.0   
+1            9.02                9.02                 0.0            0.0   
+2            9.13                9.13                 0.0            0.0   
+3            7.32                7.32                 0.0            0.0   
+4            8.53                8.53                 0.0            0.0   
+
+   hrs_othsocwrk_emp  hrs_othsocwrk_ctr  hrs_mhsvc  hrs_mhsvc_emp  \
+0                0.0                0.0        0.0            0.0   
+1                0.0                0.0        0.0            0.0   
+2                0.0                0.0        0.0            0.0   
+3                0.0                0.0        0.0            0.0   
+4                0.0                0.0        0.0            0.0   
+
+   hrs_mhsvc_ctr  
+0            0.0  
+1            0.0  
+2            0.0  
+3            0.0  
+4            0.0  
+
+[5 rows x 82 columns]
+2025-02-13 22:07:03,719 - INFO - --- End Dataset: pbj_non_nurse ---
+
+2025-02-13 22:07:03,719 - INFO - --- Dataset: qrp_provider ---
+2025-02-13 22:07:03,719 - INFO - Shape: (710016, 16)
+2025-02-13 22:07:03,719 - INFO - Columns: ['cms_certification_number_(ccn)', 'provider_name', 'address_line_1', 'city/town', 'state', 'zip_code', 'county/parish', 'telephone_number', 'cms_region', 'measure_code', 'score', 'footnote', 'start_date', 'end_date', 'measure_date_range', 'location1']
+2025-02-13 22:07:03,720 - INFO - Data Types:
+cms_certification_number_(ccn)            object
+provider_name                             object
+address_line_1                            object
+city/town                                 object
+state                                     object
+zip_code                                   int64
+county/parish                             object
+telephone_number                          object
+cms_region                                 int64
+measure_code                              object
+score                                     object
+footnote                                  object
+start_date                        datetime64[ns]
+end_date                          datetime64[ns]
+measure_date_range                        object
+location1                                 object
+dtype: object
+2025-02-13 22:07:03,937 - INFO - Missing Values:
+cms_certification_number_(ccn)    0
+provider_name                     0
+address_line_1                    0
+city/town                         0
+state                             0
+zip_code                          0
+county/parish                     0
+telephone_number                  0
+cms_region                        0
+measure_code                      0
+score                             0
+footnote                          0
+start_date                        0
+end_date                          0
+measure_date_range                0
+location1                         0
+dtype: int64
+2025-02-13 22:07:03,937 - INFO - Total Missing Values: 0
+2025-02-13 22:07:04,450 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:07:04,480 - INFO - Descriptive Statistics (Numeric Columns):
+            zip_code     cms_region
+count  710016.000000  710016.000000
+mean    50343.823486       5.190576
+std     26875.286236       2.249510
+min       660.000000       1.000000
+25%     29732.000000       4.000000
+50%     48519.000000       5.000000
+75%     73045.750000       7.000000
+max     99929.000000      10.000000
+2025-02-13 22:07:04,715 - INFO - Unique Value Counts for 'cms_region':
+cms_region
+5     153792
+4     127584
+6      97152
+9      67920
+7      66192
+3      65280
+2      45888
+1      38448
+8      27552
+10     20208
+Name: count, dtype: int64
+2025-02-13 22:07:04,771 - INFO - Unique Value Counts for 'measure_code':
+measure_code
+S_004_01_PPR_PD_COMP_PERF    14792
+S_004_01_PPR_PD_OBS          14792
+S_004_01_PPR_PD_OBS_READM    14792
+S_004_01_PPR_PD_RSRR         14792
+S_004_01_PPR_PD_RSRR_2_5     14792
+S_004_01_PPR_PD_RSRR_97_5    14792
+S_004_01_PPR_PD_VOLUME       14792
+S_005_02_DTC_COMP_PERF       14792
+S_005_02_DTC_NUMBER          14792
+S_005_02_DTC_OBS_RATE        14792
+S_005_02_DTC_RS_RATE         14792
+S_005_02_DTC_RS_RATE_2_5     14792
+S_005_02_DTC_RS_RATE_97_5    14792
+S_005_02_DTC_VOLUME          14792
+S_006_01_MSPB_NUMB           14792
+S_006_01_MSPB_SCORE          14792
+S_007_02_DENOMINATOR         14792
+S_007_02_NUMERATOR           14792
+S_007_02_OBS_RATE            14792
+S_013_02_DENOMINATOR         14792
+S_013_02_NUMERATOR           14792
+S_013_02_OBS_RATE            14792
+S_024_05_DENOMINATOR         14792
+S_024_05_NUMERATOR           14792
+S_024_05_OBS_RATE            14792
+S_025_05_DENOMINATOR         14792
+S_025_05_NUMERATOR           14792
+S_025_05_OBS_RATE            14792
+S_038_02_DENOMINATOR         14792
+S_038_02_NUMERATOR           14792
+S_038_02_OBS_RATE            14792
+S_038_02_ADJ_RATE            14792
+S_039_01_HAI_NUMBER          14792
+S_039_01_HAI_VOLUME          14792
+S_039_01_HAI_OBS_RATE        14792
+S_039_01_HAI_RS_RATE         14792
+S_039_01_HAI_RS_RATE_2_5     14792
+S_039_01_HAI_RS_RATE_97_5    14792
+S_039_01_HAI_COMP_PERF       14792
+S_040_02_DENOMINATOR         14792
+S_040_02_NUMERATOR           14792
+S_040_02_OBS_RATE            14792
+S_041_01_DENOMINATOR         14792
+S_041_01_NUMERATOR           14792
+S_041_01_OBS_RATE            14792
+S_042_01_DENOMINATOR         14792
+S_042_01_NUMERATOR           14792
+S_042_01_OBS_RATE            14792
+Name: count, dtype: int64
+2025-02-13 22:07:04,838 - INFO - Unique Value Counts for 'footnote':
+footnote
+-       589572
+9        94165
+14       12960
+10       12168
+1         1018
+13          95
+9,13        38
+Name: count, dtype: int64
+2025-02-13 22:07:04,846 - INFO - Unique Value Counts for 'start_date':
+start_date
+2023-04-01    281048
+2021-10-01    236672
+2022-10-01    103544
+2024-01-01     44376
+2023-10-01     44376
+Name: count, dtype: int64
+2025-02-13 22:07:04,854 - INFO - Unique Value Counts for 'end_date':
+end_date
+2024-03-31    369800
+2023-09-30    340216
+Name: count, dtype: int64
+2025-02-13 22:07:04,894 - INFO - Unique Value Counts for 'measure_date_range':
+measure_date_range
+-    710016
+Name: count, dtype: int64
+2025-02-13 22:07:04,961 - INFO - First 5 Rows:
+  cms_certification_number_(ccn)             provider_name  \
+0                         015009  BURNS NURSING HOME, INC.   
+1                         015009  BURNS NURSING HOME, INC.   
+2                         015009  BURNS NURSING HOME, INC.   
+3                         015009  BURNS NURSING HOME, INC.   
+4                         015009  BURNS NURSING HOME, INC.   
+
+         address_line_1     city/town state  zip_code county/parish  \
+0  701 MONROE STREET NW  RUSSELLVILLE    AL     35653      Franklin   
+1  701 MONROE STREET NW  RUSSELLVILLE    AL     35653      Franklin   
+2  701 MONROE STREET NW  RUSSELLVILLE    AL     35653      Franklin   
+3  701 MONROE STREET NW  RUSSELLVILLE    AL     35653      Franklin   
+4  701 MONROE STREET NW  RUSSELLVILLE    AL     35653      Franklin   
+
+  telephone_number  cms_region               measure_code  \
+0    (256)332-4110           4  S_004_01_PPR_PD_COMP_PERF   
+1    (256)332-4110           4        S_004_01_PPR_PD_OBS   
+2    (256)332-4110           4  S_004_01_PPR_PD_OBS_READM   
+3    (256)332-4110           4       S_004_01_PPR_PD_RSRR   
+4    (256)332-4110           4   S_004_01_PPR_PD_RSRR_2_5   
+
+                                 score footnote start_date   end_date  \
+0  No Different than the National Rate        - 2021-10-01 2023-09-30   
+1                                 5.38        - 2021-10-01 2023-09-30   
+2                                    5        - 2021-10-01 2023-09-30   
+3                                 9.02        - 2021-10-01 2023-09-30   
+4                                 6.25        - 2021-10-01 2023-09-30   
+
+  measure_date_range                                      location1  
+0                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+1                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+2                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+3                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+4                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+2025-02-13 22:07:04,961 - INFO - --- End Dataset: qrp_provider ---
+
+2025-02-13 22:07:04,961 - INFO - --- Dataset: nh_survey ---
+2025-02-13 22:07:04,961 - INFO - Shape: (44189, 41)
+2025-02-13 22:07:04,961 - INFO - Columns: ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'inspection_cycle', 'health_survey_date', 'fire_safety_survey_date', 'total_number_of_health_deficiencies', 'total_number_of_fire_safety_deficiencies', 'count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies', 'count_of_quality_of_life_and_care_deficiencies', 'count_of_resident_assessment_and_care_planning_deficiencies', 'count_of_nursing_and_physician_services_deficiencies', 'count_of_resident_rights_deficiencies', 'count_of_nutrition_and_dietary_deficiencies', 'count_of_pharmacy_service_deficiencies', 'count_of_environmental_deficiencies', 'count_of_administration_deficiencies', 'count_of_infection_control_deficiencies', 'count_of_emergency_preparedness_deficiencies', 'count_of_automatic_sprinkler_systems_deficiencies', 'count_of_construction_deficiencies', 'count_of_services_deficiencies', 'count_of_corridor_walls_and_doors_deficiencies', 'count_of_egress_deficiencies', 'count_of_electrical_deficiencies', 'count_of_emergency_plans_and_fire_drills_deficiencies', 'count_of_fire_alarm_systems_deficiencies', 'count_of_smoke_deficiencies', 'count_of_interior_deficiencies', 'count_of_gas_and_vacuum_and_electrical_systems_deficiencies', 'count_of_hazardous_area_deficiencies', 'count_of_illumination_and_emergency_power_deficiencies', 'count_of_laboratories_deficiencies', 'count_of_medical_gases_and_anaesthetizing_areas_deficiencies', 'count_of_smoking_regulations_deficiencies', 'count_of_miscellaneous_deficiencies', 'location', 'processing_date']
+2025-02-13 22:07:04,962 - INFO - Data Types:
+cms_certification_number_(ccn)                                                   object
+provider_name                                                                    object
+provider_address                                                                 object
+city/town                                                                        object
+state                                                                            object
+zip_code                                                                          int64
+inspection_cycle                                                                  int64
+health_survey_date                                                       datetime64[ns]
+fire_safety_survey_date                                                  datetime64[ns]
+total_number_of_health_deficiencies                                               int64
+total_number_of_fire_safety_deficiencies                                        float64
+count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies             int64
+count_of_quality_of_life_and_care_deficiencies                                    int64
+count_of_resident_assessment_and_care_planning_deficiencies                       int64
+count_of_nursing_and_physician_services_deficiencies                              int64
+count_of_resident_rights_deficiencies                                             int64
+count_of_nutrition_and_dietary_deficiencies                                       int64
+count_of_pharmacy_service_deficiencies                                            int64
+count_of_environmental_deficiencies                                               int64
+count_of_administration_deficiencies                                              int64
+count_of_infection_control_deficiencies                                           int64
+count_of_emergency_preparedness_deficiencies                                    float64
+count_of_automatic_sprinkler_systems_deficiencies                               float64
+count_of_construction_deficiencies                                              float64
+count_of_services_deficiencies                                                  float64
+count_of_corridor_walls_and_doors_deficiencies                                  float64
+count_of_egress_deficiencies                                                    float64
+count_of_electrical_deficiencies                                                float64
+count_of_emergency_plans_and_fire_drills_deficiencies                           float64
+count_of_fire_alarm_systems_deficiencies                                        float64
+count_of_smoke_deficiencies                                                     float64
+count_of_interior_deficiencies                                                  float64
+count_of_gas_and_vacuum_and_electrical_systems_deficiencies                     float64
+count_of_hazardous_area_deficiencies                                            float64
+count_of_illumination_and_emergency_power_deficiencies                          float64
+count_of_laboratories_deficiencies                                              float64
+count_of_medical_gases_and_anaesthetizing_areas_deficiencies                    float64
+count_of_smoking_regulations_deficiencies                                       float64
+count_of_miscellaneous_deficiencies                                             float64
+location                                                                         object
+processing_date                                                          datetime64[ns]
+dtype: object
+2025-02-13 22:07:04,971 - INFO - Missing Values:
+cms_certification_number_(ccn)                                            0
+provider_name                                                             0
+provider_address                                                          0
+city/town                                                                 0
+state                                                                     0
+zip_code                                                                  0
+inspection_cycle                                                          0
+health_survey_date                                                        0
+fire_safety_survey_date                                                  33
+total_number_of_health_deficiencies                                       0
+total_number_of_fire_safety_deficiencies                                 33
+count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies     0
+count_of_quality_of_life_and_care_deficiencies                            0
+count_of_resident_assessment_and_care_planning_deficiencies               0
+count_of_nursing_and_physician_services_deficiencies                      0
+count_of_resident_rights_deficiencies                                     0
+count_of_nutrition_and_dietary_deficiencies                               0
+count_of_pharmacy_service_deficiencies                                    0
+count_of_environmental_deficiencies                                       0
+count_of_administration_deficiencies                                      0
+count_of_infection_control_deficiencies                                   0
+count_of_emergency_preparedness_deficiencies                             33
+count_of_automatic_sprinkler_systems_deficiencies                        33
+count_of_construction_deficiencies                                       33
+count_of_services_deficiencies                                           33
+count_of_corridor_walls_and_doors_deficiencies                           33
+count_of_egress_deficiencies                                             33
+count_of_electrical_deficiencies                                         33
+count_of_emergency_plans_and_fire_drills_deficiencies                    33
+count_of_fire_alarm_systems_deficiencies                                 33
+count_of_smoke_deficiencies                                              33
+count_of_interior_deficiencies                                           33
+count_of_gas_and_vacuum_and_electrical_systems_deficiencies              33
+count_of_hazardous_area_deficiencies                                     33
+count_of_illumination_and_emergency_power_deficiencies                   33
+count_of_laboratories_deficiencies                                       33
+count_of_medical_gases_and_anaesthetizing_areas_deficiencies             33
+count_of_smoking_regulations_deficiencies                                33
+count_of_miscellaneous_deficiencies                                      33
+location                                                                  0
+processing_date                                                           0
+dtype: int64
+2025-02-13 22:07:04,971 - INFO - Total Missing Values: 660
+2025-02-13 22:07:05,011 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:07:05,073 - INFO - Descriptive Statistics (Numeric Columns):
+           zip_code  inspection_cycle  total_number_of_health_deficiencies  \
+count  44189.000000      44189.000000                         44189.000000   
+mean   50339.324809          1.997013                             7.014710   
+std    26891.348600          0.816399                             6.023656   
+min      660.000000          1.000000                             0.000000   
+25%    29720.000000          1.000000                             3.000000   
+50%    48602.000000          2.000000                             6.000000   
+75%    73049.000000          3.000000                            10.000000   
+max    99929.000000          3.000000                            70.000000   
+
+       total_number_of_fire_safety_deficiencies  \
+count                              44156.000000   
+mean                                   4.520405   
+std                                    4.572814   
+min                                    0.000000   
+25%                                    1.000000   
+50%                                    3.000000   
+75%                                    7.000000   
+max                                   44.000000   
+
+       count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies  \
+count                                       44189.000000                       
+mean                                            0.283306                       
+std                                             0.698449                       
+min                                             0.000000                       
+25%                                             0.000000                       
+50%                                             0.000000                       
+75%                                             0.000000                       
+max                                             7.000000                       
+
+       count_of_quality_of_life_and_care_deficiencies  \
+count                                    44189.000000   
+mean                                         1.755301   
+std                                          1.912846   
+min                                          0.000000   
+25%                                          0.000000   
+50%                                          1.000000   
+75%                                          3.000000   
+max                                         19.000000   
+
+       count_of_resident_assessment_and_care_planning_deficiencies  \
+count                                       44189.000000             
+mean                                            1.096359             
+std                                             1.333293             
+min                                             0.000000             
+25%                                             0.000000             
+50%                                             1.000000             
+75%                                             2.000000             
+max                                            11.000000             
+
+       count_of_nursing_and_physician_services_deficiencies  \
+count                                       44189.000000      
+mean                                            0.249270      
+std                                             0.588568      
+min                                             0.000000      
+25%                                             0.000000      
+50%                                             0.000000      
+75%                                             0.000000      
+max                                             8.000000      
+
+       count_of_resident_rights_deficiencies  \
+count                           44189.000000   
+mean                                1.066442   
+std                                 1.423154   
+min                                 0.000000   
+25%                                 0.000000   
+50%                                 1.000000   
+75%                                 2.000000   
+max                                17.000000   
+
+       count_of_nutrition_and_dietary_deficiencies  ...  \
+count                                 44189.000000  ...   
+mean                                      0.732943  ...   
+std                                       0.995185  ...   
+min                                       0.000000  ...   
+25%                                       0.000000  ...   
+50%                                       0.000000  ...   
+75%                                       1.000000  ...   
+max                                      11.000000  ...   
+
+       count_of_fire_alarm_systems_deficiencies  count_of_smoke_deficiencies  \
+count                                   44156.0                 44156.000000   
+mean                                        0.0                     1.759987   
+std                                         0.0                     1.835830   
+min                                         0.0                     0.000000   
+25%                                         0.0                     0.000000   
+50%                                         0.0                     1.000000   
+75%                                         0.0                     3.000000   
+max                                         0.0                    13.000000   
+
+       count_of_interior_deficiencies  \
+count                    44156.000000   
+mean                         0.000045   
+std                          0.006730   
+min                          0.000000   
+25%                          0.000000   
+50%                          0.000000   
+75%                          0.000000   
+max                          1.000000   
+
+       count_of_gas_and_vacuum_and_electrical_systems_deficiencies  \
+count                                       44156.000000             
+mean                                            0.814340             
+std                                             1.050809             
+min                                             0.000000             
+25%                                             0.000000             
+50%                                             0.000000             
+75%                                             1.000000             
+max                                             8.000000             
+
+       count_of_hazardous_area_deficiencies  \
+count                          44156.000000   
+mean                               0.000023   
+std                                0.004759   
+min                                0.000000   
+25%                                0.000000   
+50%                                0.000000   
+75%                                0.000000   
+max                                1.000000   
+
+       count_of_illumination_and_emergency_power_deficiencies  \
+count                                       44156.000000        
+mean                                            0.000023        
+std                                             0.004759        
+min                                             0.000000        
+25%                                             0.000000        
+50%                                             0.000000        
+75%                                             0.000000        
+max                                             1.000000        
+
+       count_of_laboratories_deficiencies  \
+count                             44156.0   
+mean                                  0.0   
+std                                   0.0   
+min                                   0.0   
+25%                                   0.0   
+50%                                   0.0   
+75%                                   0.0   
+max                                   0.0   
+
+       count_of_medical_gases_and_anaesthetizing_areas_deficiencies  \
+count                                       44156.000000              
+mean                                            0.000045              
+std                                             0.006730              
+min                                             0.000000              
+25%                                             0.000000              
+50%                                             0.000000              
+75%                                             0.000000              
+max                                             1.000000              
+
+       count_of_smoking_regulations_deficiencies  \
+count                                    44156.0   
+mean                                         0.0   
+std                                          0.0   
+min                                          0.0   
+25%                                          0.0   
+50%                                          0.0   
+75%                                          0.0   
+max                                          0.0   
+
+       count_of_miscellaneous_deficiencies  
+count                         44156.000000  
+mean                              0.466800  
+std                               0.766179  
+min                               0.000000  
+25%                               0.000000  
+50%                               0.000000  
+75%                               1.000000  
+max                               7.000000  
+
+[8 rows x 32 columns]
+2025-02-13 22:07:05,087 - INFO - Unique Value Counts for 'inspection_cycle':
+inspection_cycle
+1    14792
+2    14737
+3    14660
+Name: count, dtype: int64
+2025-02-13 22:07:05,090 - INFO - Unique Value Counts for 'total_number_of_fire_safety_deficiencies':
+total_number_of_fire_safety_deficiencies
+0.0     8258
+2.0     5127
+3.0     4877
+1.0     4709
+4.0     4101
+5.0     3287
+6.0     2667
+7.0     2182
+8.0     1809
+9.0     1407
+10.0    1120
+11.0     987
+12.0     766
+13.0     620
+14.0     468
+15.0     384
+16.0     285
+17.0     239
+18.0     191
+19.0     136
+20.0     124
+21.0      93
+22.0      80
+23.0      47
+24.0      42
+25.0      38
+26.0      30
+27.0      20
+28.0      14
+30.0      13
+31.0       9
+32.0       6
+33.0       6
+29.0       3
+34.0       3
+38.0       2
+36.0       2
+37.0       2
+35.0       1
+44.0       1
+Name: count, dtype: int64
+2025-02-13 22:07:05,091 - INFO - Unique Value Counts for 'count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies':
+count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies
+0    36099
+1     5113
+2     1870
+3      820
+4      236
+5       45
+6        5
+7        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,092 - INFO - Unique Value Counts for 'count_of_quality_of_life_and_care_deficiencies':
+count_of_quality_of_life_and_care_deficiencies
+0     13938
+1     10862
+2      7383
+3      4938
+4      3015
+5      1810
+6      1032
+7       562
+8       307
+9       165
+10       97
+11       36
+12       19
+13       13
+15        5
+14        4
+17        1
+16        1
+19        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,093 - INFO - Unique Value Counts for 'count_of_resident_assessment_and_care_planning_deficiencies':
+count_of_resident_assessment_and_care_planning_deficiencies
+0     19356
+1     11881
+2      6808
+3      3439
+4      1555
+5       711
+6       293
+7        96
+8        31
+9        11
+10        7
+11        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,094 - INFO - Unique Value Counts for 'count_of_nursing_and_physician_services_deficiencies':
+count_of_nursing_and_physician_services_deficiencies
+0    35751
+1     6517
+2     1463
+3      319
+4      102
+5       21
+6       11
+7        4
+8        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,095 - INFO - Unique Value Counts for 'count_of_resident_rights_deficiencies':
+count_of_resident_rights_deficiencies
+0     20711
+1     11431
+2      6108
+3      3028
+4      1521
+5       698
+6       344
+7       173
+8        99
+9        45
+10       15
+11        7
+12        5
+17        2
+14        1
+13        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,096 - INFO - Unique Value Counts for 'count_of_nutrition_and_dietary_deficiencies':
+count_of_nutrition_and_dietary_deficiencies
+0     22920
+1     14168
+2      4595
+3      1569
+4       584
+5       208
+6        93
+7        33
+8        15
+9         3
+11        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,096 - INFO - Unique Value Counts for 'count_of_pharmacy_service_deficiencies':
+count_of_pharmacy_service_deficiencies
+0    21804
+1    12434
+2     6202
+3     2449
+4      921
+5      295
+6       65
+7       19
+Name: count, dtype: int64
+2025-02-13 22:07:05,097 - INFO - Unique Value Counts for 'count_of_environmental_deficiencies':
+count_of_environmental_deficiencies
+0    37074
+1     5780
+2     1080
+3      201
+4       38
+5       12
+6        2
+7        2
+Name: count, dtype: int64
+2025-02-13 22:07:05,098 - INFO - Unique Value Counts for 'count_of_administration_deficiencies':
+count_of_administration_deficiencies
+0     37292
+1      5334
+2      1070
+3       291
+4       110
+5        42
+6        22
+7        16
+9         4
+8         4
+10        2
+11        1
+12        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,099 - INFO - Unique Value Counts for 'count_of_infection_control_deficiencies':
+count_of_infection_control_deficiencies
+0    24404
+1    16003
+2     2811
+3      709
+4      176
+5       65
+6       15
+7        5
+8        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,100 - INFO - Unique Value Counts for 'count_of_emergency_preparedness_deficiencies':
+count_of_emergency_preparedness_deficiencies
+0.0     34225
+1.0      5147
+2.0      2002
+3.0       975
+4.0       618
+5.0       378
+6.0       278
+7.0       166
+8.0       104
+9.0        79
+10.0       48
+11.0       43
+12.0       23
+14.0       17
+13.0       15
+17.0        8
+15.0        7
+16.0        5
+23.0        4
+20.0        4
+19.0        3
+18.0        2
+21.0        2
+22.0        1
+25.0        1
+24.0        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,101 - INFO - Unique Value Counts for 'count_of_automatic_sprinkler_systems_deficiencies':
+count_of_automatic_sprinkler_systems_deficiencies
+0.0    44155
+2.0        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,102 - INFO - Unique Value Counts for 'count_of_construction_deficiencies':
+count_of_construction_deficiencies
+0.0    40044
+1.0     3888
+2.0      216
+3.0        8
+Name: count, dtype: int64
+2025-02-13 22:07:05,103 - INFO - Unique Value Counts for 'count_of_services_deficiencies':
+count_of_services_deficiencies
+0.0    34112
+1.0     8423
+2.0     1492
+3.0      123
+4.0        6
+Name: count, dtype: int64
+2025-02-13 22:07:05,104 - INFO - Unique Value Counts for 'count_of_corridor_walls_and_doors_deficiencies':
+count_of_corridor_walls_and_doors_deficiencies
+0.0    44154
+1.0        2
+Name: count, dtype: int64
+2025-02-13 22:07:05,106 - INFO - Unique Value Counts for 'count_of_egress_deficiencies':
+count_of_egress_deficiencies
+0.0     27378
+1.0     10729
+2.0      4111
+3.0      1325
+4.0       426
+5.0       130
+6.0        39
+7.0        14
+8.0         2
+10.0        1
+9.0         1
+Name: count, dtype: int64
+2025-02-13 22:07:05,107 - INFO - Unique Value Counts for 'count_of_electrical_deficiencies':
+count_of_electrical_deficiencies
+0.0    43810
+1.0      346
+Name: count, dtype: int64
+2025-02-13 22:07:05,108 - INFO - Unique Value Counts for 'count_of_emergency_plans_and_fire_drills_deficiencies':
+count_of_emergency_plans_and_fire_drills_deficiencies
+0.0    44156
+Name: count, dtype: int64
+2025-02-13 22:07:05,109 - INFO - Unique Value Counts for 'count_of_fire_alarm_systems_deficiencies':
+count_of_fire_alarm_systems_deficiencies
+0.0    44156
+Name: count, dtype: int64
+2025-02-13 22:07:05,110 - INFO - Unique Value Counts for 'count_of_smoke_deficiencies':
+count_of_smoke_deficiencies
+0.0     14062
+1.0      9797
+2.0      7890
+3.0      5141
+4.0      3306
+5.0      1902
+6.0      1113
+7.0       526
+8.0       253
+9.0       100
+10.0       42
+11.0       14
+12.0        8
+13.0        2
+Name: count, dtype: int64
+2025-02-13 22:07:05,111 - INFO - Unique Value Counts for 'count_of_interior_deficiencies':
+count_of_interior_deficiencies
+0.0    44154
+1.0        2
+Name: count, dtype: int64
+2025-02-13 22:07:05,112 - INFO - Unique Value Counts for 'count_of_gas_and_vacuum_and_electrical_systems_deficiencies':
+count_of_gas_and_vacuum_and_electrical_systems_deficiencies
+0.0    22589
+1.0    11995
+2.0     6143
+3.0     2387
+4.0      771
+5.0      208
+6.0       50
+7.0       12
+8.0        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,113 - INFO - Unique Value Counts for 'count_of_hazardous_area_deficiencies':
+count_of_hazardous_area_deficiencies
+0.0    44155
+1.0        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,114 - INFO - Unique Value Counts for 'count_of_illumination_and_emergency_power_deficiencies':
+count_of_illumination_and_emergency_power_deficiencies
+0.0    44155
+1.0        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,115 - INFO - Unique Value Counts for 'count_of_laboratories_deficiencies':
+count_of_laboratories_deficiencies
+0.0    44156
+Name: count, dtype: int64
+2025-02-13 22:07:05,116 - INFO - Unique Value Counts for 'count_of_medical_gases_and_anaesthetizing_areas_deficiencies':
+count_of_medical_gases_and_anaesthetizing_areas_deficiencies
+0.0    44154
+1.0        2
+Name: count, dtype: int64
+2025-02-13 22:07:05,117 - INFO - Unique Value Counts for 'count_of_smoking_regulations_deficiencies':
+count_of_smoking_regulations_deficiencies
+0.0    44156
+Name: count, dtype: int64
+2025-02-13 22:07:05,118 - INFO - Unique Value Counts for 'count_of_miscellaneous_deficiencies':
+count_of_miscellaneous_deficiencies
+0.0    29380
+1.0    10280
+2.0     3409
+3.0      865
+4.0      195
+5.0       24
+6.0        2
+7.0        1
+Name: count, dtype: int64
+2025-02-13 22:07:05,124 - INFO - Unique Value Counts for 'processing_date':
+processing_date
+2025-01-01    44189
+Name: count, dtype: int64
+2025-02-13 22:07:05,128 - INFO - First 5 Rows:
+  cms_certification_number_(ccn)                   provider_name  \
+0                         015009        BURNS NURSING HOME, INC.   
+1                         015009        BURNS NURSING HOME, INC.   
+2                         015009        BURNS NURSING HOME, INC.   
+3                         015010  COOSA VALLEY HEALTHCARE CENTER   
+4                         015010  COOSA VALLEY HEALTHCARE CENTER   
+
+         provider_address     city/town state  zip_code  inspection_cycle  \
+0    701 MONROE STREET NW  RUSSELLVILLE    AL     35653                 1   
+1    701 MONROE STREET NW  RUSSELLVILLE    AL     35653                 2   
+2    701 MONROE STREET NW  RUSSELLVILLE    AL     35653                 3   
+3  260 WEST WALNUT STREET     SYLACAUGA    AL     35150                 1   
+4  260 WEST WALNUT STREET     SYLACAUGA    AL     35150                 2   
+
+  health_survey_date fire_safety_survey_date  \
+0         2023-03-02              2023-02-15   
+1         2019-08-21              2019-08-21   
+2         2018-08-01              2018-08-09   
+3         2022-04-09              2022-04-13   
+4         2019-06-13              2019-06-18   
+
+   total_number_of_health_deficiencies  ...  count_of_interior_deficiencies  \
+0                                    4  ...                             0.0   
+1                                    2  ...                             0.0   
+2                                    1  ...                             0.0   
+3                                    0  ...                             0.0   
+4                                    1  ...                             0.0   
+
+   count_of_gas_and_vacuum_and_electrical_systems_deficiencies  \
+0                                                0.0             
+1                                                0.0             
+2                                                0.0             
+3                                                0.0             
+4                                                0.0             
+
+   count_of_hazardous_area_deficiencies  \
+0                                   0.0   
+1                                   0.0   
+2                                   0.0   
+3                                   0.0   
+4                                   0.0   
+
+   count_of_illumination_and_emergency_power_deficiencies  \
+0                                                0.0        
+1                                                0.0        
+2                                                0.0        
+3                                                0.0        
+4                                                0.0        
+
+   count_of_laboratories_deficiencies  \
+0                                 0.0   
+1                                 0.0   
+2                                 0.0   
+3                                 0.0   
+4                                 0.0   
+
+   count_of_medical_gases_and_anaesthetizing_areas_deficiencies  \
+0                                                0.0              
+1                                                0.0              
+2                                                0.0              
+3                                                0.0              
+4                                                0.0              
+
+   count_of_smoking_regulations_deficiencies  \
+0                                        0.0   
+1                                        0.0   
+2                                        0.0   
+3                                        0.0   
+4                                        0.0   
+
+   count_of_miscellaneous_deficiencies  \
+0                                  0.0   
+1                                  0.0   
+2                                  0.0   
+3                                  0.0   
+4                                  1.0   
+
+                                     location  processing_date  
+0  701 MONROE STREET NW,RUSSELLVILLE,AL,35653       2025-01-01  
+1  701 MONROE STREET NW,RUSSELLVILLE,AL,35653       2025-01-01  
+2  701 MONROE STREET NW,RUSSELLVILLE,AL,35653       2025-01-01  
+3   260 WEST WALNUT STREET,SYLACAUGA,AL,35150       2025-01-01  
+4   260 WEST WALNUT STREET,SYLACAUGA,AL,35150       2025-01-01  
+
+[5 rows x 41 columns]
+2025-02-13 22:07:05,129 - INFO - --- End Dataset: nh_survey ---
+
+2025-02-13 22:07:05,129 - INFO - --- Dataset: nh_quality_mds ---
+2025-02-13 22:07:05,129 - INFO - Shape: (251464, 23)
+2025-02-13 22:07:05,129 - INFO - Columns: ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'measure_code', 'measure_description', 'resident_type', 'q1_measure_score', 'footnote_for_q1_measure_score', 'q2_measure_score', 'footnote_for_q2_measure_score', 'q3_measure_score', 'footnote_for_q3_measure_score', 'q4_measure_score', 'footnote_for_q4_measure_score', 'four_quarter_average_score', 'footnote_for_four_quarter_average_score', 'used_in_quality_measure_five_star_rating', 'measure_period', 'location', 'processing_date']
+2025-02-13 22:07:05,129 - INFO - Data Types:
+cms_certification_number_(ccn)                      object
+provider_name                                       object
+provider_address                                    object
+city/town                                           object
+state                                               object
+zip_code                                             int64
+measure_code                                         int64
+measure_description                                 object
+resident_type                                       object
+q1_measure_score                                   float64
+footnote_for_q1_measure_score                      float64
+q2_measure_score                                   float64
+footnote_for_q2_measure_score                      float64
+q3_measure_score                                   float64
+footnote_for_q3_measure_score                      float64
+q4_measure_score                                   float64
+footnote_for_q4_measure_score                      float64
+four_quarter_average_score                         float64
+footnote_for_four_quarter_average_score            float64
+used_in_quality_measure_five_star_rating            object
+measure_period                              datetime64[ns]
+location                                            object
+processing_date                             datetime64[ns]
+dtype: object
+2025-02-13 22:07:05,190 - INFO - Missing Values:
+cms_certification_number_(ccn)                   0
+provider_name                                    0
+provider_address                                 0
+city/town                                        0
+state                                            0
+zip_code                                         0
+measure_code                                     0
+measure_description                              0
+resident_type                                    0
+q1_measure_score                             64416
+footnote_for_q1_measure_score               187048
+q2_measure_score                             30096
+footnote_for_q2_measure_score               221368
+q3_measure_score                             29209
+footnote_for_q3_measure_score               222255
+q4_measure_score                             28945
+footnote_for_q4_measure_score               222519
+four_quarter_average_score                    8775
+footnote_for_four_quarter_average_score     242689
+used_in_quality_measure_five_star_rating         0
+measure_period                              251464
+location                                         0
+processing_date                                  0
+dtype: int64
+2025-02-13 22:07:05,190 - INFO - Total Missing Values: 1508784
+2025-02-13 22:07:05,418 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:07:05,550 - INFO - Descriptive Statistics (Numeric Columns):
+            zip_code   measure_code  q1_measure_score  \
+count  251464.000000  251464.000000     187048.000000   
+mean    50343.823486     431.235294         29.152946   
+std     26875.320747      27.061051         38.566512   
+min       660.000000     401.000000          0.000000   
+25%     29732.000000     408.000000          0.964827   
+50%     48519.000000     419.000000          6.583004   
+75%     73045.750000     452.000000         64.814815   
+max     99929.000000     480.000000        100.000000   
+
+       footnote_for_q1_measure_score  q2_measure_score  \
+count                   64416.000000     221368.000000   
+mean                        9.057004         28.301362   
+std                         0.740011         36.190215   
+min                         9.000000          0.000000   
+25%                         9.000000          1.754386   
+50%                         9.000000          9.677419   
+75%                         9.000000         39.062500   
+max                        21.000000        100.000000   
+
+       footnote_for_q2_measure_score  q3_measure_score  \
+count                   30096.000000     222255.000000   
+mean                        9.119717         28.010306   
+std                         1.078166         36.341175   
+min                         9.000000          0.000000   
+25%                         9.000000          1.642325   
+50%                         9.000000          9.090909   
+75%                         9.000000         37.837838   
+max                        21.000000        100.000000   
+
+       footnote_for_q3_measure_score  q4_measure_score  \
+count                   29209.000000     222519.000000   
+mean                        9.121504         27.763505   
+std                         1.093571         36.364891   
+min                         9.000000          0.000000   
+25%                         9.000000          1.562500   
+50%                         9.000000          8.695652   
+75%                         9.000000         37.254902   
+max                        21.000000        100.000000   
+
+       footnote_for_q4_measure_score  four_quarter_average_score  \
+count                   28945.000000               242689.000000   
+mean                        9.111695                   27.987423   
+std                         1.094674                   35.580175   
+min                         9.000000                    0.000000   
+25%                         9.000000                    2.020202   
+50%                         9.000000                    9.864886   
+75%                         9.000000                   36.609312   
+max                        21.000000                  100.000000   
+
+       footnote_for_four_quarter_average_score  
+count                              8775.000000  
+mean                                  9.358519  
+std                                   1.963599  
+min                                   9.000000  
+25%                                   9.000000  
+50%                                   9.000000  
+75%                                   9.000000  
+max                                  21.000000  
+2025-02-13 22:07:05,617 - INFO - Unique Value Counts for 'measure_code':
+measure_code
+401    14792
+404    14792
+406    14792
+407    14792
+408    14792
+409    14792
+410    14792
+415    14792
+419    14792
+430    14792
+434    14792
+451    14792
+452    14792
+454    14792
+472    14792
+479    14792
+480    14792
+Name: count, dtype: int64
+2025-02-13 22:07:05,655 - INFO - Unique Value Counts for 'measure_description':
+measure_description
+Percentage of long-stay residents whose need for help with daily activities has increased                      14792
+Percentage of long-stay residents who lose too much weight                                                     14792
+Percentage of long-stay residents with a catheter inserted and left in their bladder                           14792
+Percentage of long-stay residents with a urinary tract infection                                               14792
+Percentage of long-stay residents who have depressive symptoms                                                 14792
+Percentage of long-stay residents who were physically restrained                                               14792
+Percentage of long-stay residents experiencing one or more falls with major injury                             14792
+Percentage of long-stay residents assessed and appropriately given the pneumococcal vaccine                    14792
+Percentage of long-stay residents who received an antipsychotic medication                                     14792
+Percentage of short-stay residents assessed and appropriately given the pneumococcal vaccine                   14792
+Percentage of short-stay residents who newly received an antipsychotic medication                              14792
+Percentage of long-stay residents whose ability to walk independently worsened                                 14792
+Percentage of long-stay residents who received an antianxiety or hypnotic medication                           14792
+Percentage of long-stay residents assessed and appropriately given the seasonal influenza vaccine              14792
+Percentage of short-stay residents who were assessed and appropriately given the seasonal influenza vaccine    14792
+Percentage of long-stay residents with pressure ulcers                                                         14792
+Percentage of long-stay residents with new or worsened bowel or bladder incontinence                           14792
+Name: count, dtype: int64
+2025-02-13 22:07:05,673 - INFO - Unique Value Counts for 'resident_type':
+resident_type
+Long Stay     207088
+Short Stay     44376
+Name: count, dtype: int64
+2025-02-13 22:07:05,680 - INFO - Unique Value Counts for 'footnote_for_q1_measure_score':
+footnote_for_q1_measure_score
+9.0     63395
+10.0      780
+21.0      241
+Name: count, dtype: int64
+2025-02-13 22:07:05,687 - INFO - Unique Value Counts for 'footnote_for_q2_measure_score':
+footnote_for_q2_measure_score
+9.0     29144
+10.0      711
+21.0      241
+Name: count, dtype: int64
+2025-02-13 22:07:05,694 - INFO - Unique Value Counts for 'footnote_for_q3_measure_score':
+footnote_for_q3_measure_score
+9.0     28311
+10.0      657
+21.0      241
+Name: count, dtype: int64
+2025-02-13 22:07:05,702 - INFO - Unique Value Counts for 'footnote_for_q4_measure_score':
+footnote_for_q4_measure_score
+9.0     28363
+10.0      341
+21.0      241
+Name: count, dtype: int64
+2025-02-13 22:07:05,711 - INFO - Unique Value Counts for 'footnote_for_four_quarter_average_score':
+footnote_for_four_quarter_average_score
+9.0     8280
+10.0     254
+21.0     241
+Name: count, dtype: int64
+2025-02-13 22:07:05,726 - INFO - Unique Value Counts for 'used_in_quality_measure_five_star_rating':
+used_in_quality_measure_five_star_rating
+N    133128
+Y    118336
+Name: count, dtype: int64
+2025-02-13 22:07:05,729 - INFO - Unique Value Counts for 'measure_period':
+Series([], Name: count, dtype: int64)
+2025-02-13 22:07:05,756 - INFO - Unique Value Counts for 'processing_date':
+processing_date
+2025-01-01    251464
+Name: count, dtype: int64
+2025-02-13 22:07:05,760 - INFO - First 5 Rows:
+  cms_certification_number_(ccn)             provider_name  \
+0                         015009  BURNS NURSING HOME, INC.   
+1                         015009  BURNS NURSING HOME, INC.   
+2                         015009  BURNS NURSING HOME, INC.   
+3                         015009  BURNS NURSING HOME, INC.   
+4                         015009  BURNS NURSING HOME, INC.   
+
+       provider_address     city/town state  zip_code  measure_code  \
+0  701 MONROE STREET NW  RUSSELLVILLE    AL     35653           401   
+1  701 MONROE STREET NW  RUSSELLVILLE    AL     35653           404   
+2  701 MONROE STREET NW  RUSSELLVILLE    AL     35653           406   
+3  701 MONROE STREET NW  RUSSELLVILLE    AL     35653           407   
+4  701 MONROE STREET NW  RUSSELLVILLE    AL     35653           408   
+
+                                 measure_description resident_type  \
+0  Percentage of long-stay residents whose need f...     Long Stay   
+1  Percentage of long-stay residents who lose too...     Long Stay   
+2  Percentage of long-stay residents with a cathe...     Long Stay   
+3  Percentage of long-stay residents with a urina...     Long Stay   
+4  Percentage of long-stay residents who have dep...     Long Stay   
+
+   q1_measure_score  ...  q3_measure_score  footnote_for_q3_measure_score  \
+0               NaN  ...          5.555556                            NaN   
+1           0.00000  ...         14.285714                            NaN   
+2           3.92488  ...          4.926641                            NaN   
+3           0.00000  ...          2.173913                            NaN   
+4           0.00000  ...          0.000000                            NaN   
+
+   q4_measure_score  footnote_for_q4_measure_score  \
+0         11.428571                            NaN   
+1         20.000000                            NaN   
+2          5.312820                            NaN   
+3          2.127660                            NaN   
+4          0.000000                            NaN   
+
+   four_quarter_average_score  footnote_for_four_quarter_average_score  \
+0                    7.339450                                      NaN   
+1                    9.756098                                      NaN   
+2                    4.457566                                      NaN   
+3                    1.117318                                      NaN   
+4                    0.000000                                      NaN   
+
+   used_in_quality_measure_five_star_rating  measure_period  \
+0                                         Y             NaT   
+1                                         N             NaT   
+2                                         Y             NaT   
+3                                         Y             NaT   
+4                                         N             NaT   
+
+                                        location processing_date  
+0  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653      2025-01-01  
+1  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653      2025-01-01  
+2  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653      2025-01-01  
+3  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653      2025-01-01  
+4  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653      2025-01-01  
+
+[5 rows x 23 columns]
+2025-02-13 22:07:05,760 - INFO - --- End Dataset: nh_quality_mds ---
+
+2025-02-13 22:07:05,760 - INFO - --- Dataset: nh_ownership ---
+2025-02-13 22:07:05,760 - INFO - Shape: (144651, 13)
+2025-02-13 22:07:05,760 - INFO - Columns: ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'role_played_by_owner_or_manager_in_facility', 'owner_type', 'owner_name', 'ownership_percentage', 'association_date', 'location', 'processing_date']
+2025-02-13 22:07:05,760 - INFO - Data Types:
+cms_certification_number_(ccn)                         object
+provider_name                                          object
+provider_address                                       object
+city/town                                              object
+state                                                  object
+zip_code                                                int64
+role_played_by_owner_or_manager_in_facility            object
+owner_type                                             object
+owner_name                                             object
+ownership_percentage                                   object
+association_date                               datetime64[ns]
+location                                               object
+processing_date                                datetime64[ns]
+dtype: object
+2025-02-13 22:07:05,797 - INFO - Missing Values:
+cms_certification_number_(ccn)                      0
+provider_name                                       0
+provider_address                                    0
+city/town                                           0
+state                                               0
+zip_code                                            0
+role_played_by_owner_or_manager_in_facility         0
+owner_type                                        595
+owner_name                                        595
+ownership_percentage                              595
+association_date                               144651
+location                                            0
+processing_date                                     0
+dtype: int64
+2025-02-13 22:07:05,797 - INFO - Total Missing Values: 146436
+2025-02-13 22:07:05,899 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:07:05,909 - INFO - Descriptive Statistics (Numeric Columns):
+            zip_code
+count  144651.000000
+mean    49603.405237
+std     26783.368229
+min       660.000000
+25%     28655.000000
+50%     47532.000000
+75%     71203.000000
+max     99929.000000
+2025-02-13 22:07:05,964 - INFO - Unique Value Counts for 'role_played_by_owner_or_manager_in_facility':
+role_played_by_owner_or_manager_in_facility
+CORPORATE DIRECTOR                           29596
+5% OR GREATER INDIRECT OWNERSHIP INTEREST    28958
+CORPORATE OFFICER                            25777
+5% OR GREATER DIRECT OWNERSHIP INTEREST      19749
+MANAGING EMPLOYEE                            19555
+OPERATIONAL/MANAGERIAL CONTROL               18189
+PARTNERSHIP INTEREST                          1022
+5% OR GREATER SECURITY INTEREST                727
+Ownership Data Not Available                   595
+5% OR GREATER MORTGAGE INTEREST                483
+Name: count, dtype: int64
+2025-02-13 22:07:05,971 - INFO - Unique Value Counts for 'owner_type':
+owner_type
+Individual      104102
+Organization     39954
+Name: count, dtype: int64
+2025-02-13 22:07:05,981 - INFO - Unique Value Counts for 'association_date':
+Series([], Name: count, dtype: int64)
+2025-02-13 22:07:05,997 - INFO - Unique Value Counts for 'processing_date':
+processing_date
+2025-01-01    144651
+Name: count, dtype: int64
+2025-02-13 22:07:05,999 - INFO - First 5 Rows:
+  cms_certification_number_(ccn)             provider_name  \
+0                         015009  BURNS NURSING HOME, INC.   
+1                         015009  BURNS NURSING HOME, INC.   
+2                         015009  BURNS NURSING HOME, INC.   
+3                         015009  BURNS NURSING HOME, INC.   
+4                         015009  BURNS NURSING HOME, INC.   
+
+       provider_address     city/town state  zip_code  \
+0  701 MONROE STREET NW  RUSSELLVILLE    AL     35653   
+1  701 MONROE STREET NW  RUSSELLVILLE    AL     35653   
+2  701 MONROE STREET NW  RUSSELLVILLE    AL     35653   
+3  701 MONROE STREET NW  RUSSELLVILLE    AL     35653   
+4  701 MONROE STREET NW  RUSSELLVILLE    AL     35653   
+
+  role_played_by_owner_or_manager_in_facility  owner_type        owner_name  \
+0     5% OR GREATER DIRECT OWNERSHIP INTEREST  Individual  DEARMAN, CAMERON   
+1     5% OR GREATER DIRECT OWNERSHIP INTEREST  Individual   DEARMAN, MARTHA   
+2                          CORPORATE DIRECTOR  Individual   DEARMAN, MARTHA   
+3                           CORPORATE OFFICER  Individual  DEARMAN, CAMERON   
+4                           CORPORATE OFFICER  Individual     DEARMAN, MARK   
+
+  ownership_percentage association_date  \
+0                   5%              NaT   
+1                  81%              NaT   
+2       NOT APPLICABLE              NaT   
+3       NOT APPLICABLE              NaT   
+4       NOT APPLICABLE              NaT   
+
+                                     location processing_date  
+0  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+1  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+2  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+3  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+4  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+2025-02-13 22:07:05,999 - INFO - --- End Dataset: nh_ownership ---
+
+2025-02-13 22:07:05,999 - INFO - --- Dataset: nh_citations ---
+2025-02-13 22:07:05,999 - INFO - Shape: (406789, 23)
+2025-02-13 22:07:05,999 - INFO - Columns: ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'survey_date', 'survey_type', 'deficiency_prefix', 'deficiency_category', 'deficiency_tag_number', 'deficiency_description', 'scope_severity_code', 'deficiency_corrected', 'correction_date', 'inspection_cycle', 'standard_deficiency', 'complaint_deficiency', 'infection_control_inspection_deficiency', 'citation_under_idr', 'citation_under_iidr', 'location', 'processing_date']
+2025-02-13 22:07:06,000 - INFO - Data Types:
+cms_certification_number_(ccn)                     object
+provider_name                                      object
+provider_address                                   object
+city/town                                          object
+state                                              object
+zip_code                                            int64
+survey_date                                datetime64[ns]
+survey_type                                        object
+deficiency_prefix                                  object
+deficiency_category                                object
+deficiency_tag_number                               int64
+deficiency_description                             object
+scope_severity_code                                object
+deficiency_corrected                               object
+correction_date                            datetime64[ns]
+inspection_cycle                                    int64
+standard_deficiency                                object
+complaint_deficiency                               object
+infection_control_inspection_deficiency            object
+citation_under_idr                                 object
+citation_under_iidr                                object
+location                                           object
+processing_date                            datetime64[ns]
+dtype: object
+2025-02-13 22:07:06,167 - INFO - Missing Values:
+cms_certification_number_(ccn)                0
+provider_name                                 0
+provider_address                              0
+city/town                                     0
+state                                         0
+zip_code                                      0
+survey_date                                   0
+survey_type                                   0
+deficiency_prefix                             0
+deficiency_category                           0
+deficiency_tag_number                         0
+deficiency_description                        0
+scope_severity_code                           0
+deficiency_corrected                          0
+correction_date                            1392
+inspection_cycle                              0
+standard_deficiency                           0
+complaint_deficiency                          0
+infection_control_inspection_deficiency       0
+citation_under_idr                            0
+citation_under_iidr                           0
+location                                      0
+processing_date                               0
+dtype: int64
+2025-02-13 22:07:06,168 - INFO - Total Missing Values: 1392
+2025-02-13 22:07:06,659 - INFO - Number of Duplicate Rows: 0
+2025-02-13 22:07:06,692 - INFO - Descriptive Statistics (Numeric Columns):
+            zip_code  deficiency_tag_number  inspection_cycle
+count  406789.000000          406789.000000     406789.000000
+mean    54492.822982             709.477156          1.958423
+std     28369.178174             102.584999          0.812428
+min       660.000000             151.000000          1.000000
+25%     31040.000000             641.000000          1.000000
+50%     55077.000000             689.000000          2.000000
+75%     78052.000000             761.000000          3.000000
+max     99929.000000             949.000000          3.000000
+2025-02-13 22:07:06,824 - INFO - Unique Value Counts for 'survey_type':
+survey_type
+Health    406789
+Name: count, dtype: int64
+2025-02-13 22:07:06,847 - INFO - Unique Value Counts for 'deficiency_prefix':
+deficiency_prefix
+F    406789
+Name: count, dtype: int64
+2025-02-13 22:07:06,890 - INFO - Unique Value Counts for 'deficiency_category':
+deficiency_category
+Quality of Life and Care Deficiencies                         106638
+Resident Rights Deficiencies                                   61758
+Resident Assessment and Care Planning Deficiencies             59318
+Pharmacy Service Deficiencies                                  44669
+Nutrition and Dietary Deficiencies                             35993
+Infection Control Deficiencies                                 31622
+Freedom from Abuse, Neglect, and Exploitation Deficiencies     28636
+Nursing and Physician Services Deficiencies                    14688
+Administration Deficiencies                                    12212
+Environmental Deficiencies                                     11255
+Name: count, dtype: int64
+2025-02-13 22:07:06,988 - INFO - Unique Value Counts for 'scope_severity_code':
+scope_severity_code
+D    251940
+E     93789
+F     27660
+G     13196
+J      6272
+B      5429
+C      4899
+K      2283
+L       731
+H       557
+I        33
+Name: count, dtype: int64
+2025-02-13 22:07:07,033 - INFO - Unique Value Counts for 'deficiency_corrected':
+deficiency_corrected
+Deficient, Provider has date of correction       395975
+Deficient, Provider has plan of correction         5134
+Past Non-Compliance                                3848
+Deficient, Provider has no plan of correction      1361
+Waiver has been granted                             471
+Name: count, dtype: int64
+2025-02-13 22:07:07,042 - INFO - Unique Value Counts for 'inspection_cycle':
+inspection_cycle
+1    143056
+2    137590
+3    126143
+Name: count, dtype: int64
+2025-02-13 22:07:07,064 - INFO - Unique Value Counts for 'standard_deficiency':
+standard_deficiency
+Y    309973
+N     96816
+Name: count, dtype: int64
+2025-02-13 22:07:07,087 - INFO - Unique Value Counts for 'complaint_deficiency':
+complaint_deficiency
+N    279766
+Y    127023
+Name: count, dtype: int64
+2025-02-13 22:07:07,111 - INFO - Unique Value Counts for 'infection_control_inspection_deficiency':
+infection_control_inspection_deficiency
+N    401005
+Y      5784
+Name: count, dtype: int64
+2025-02-13 22:07:07,135 - INFO - Unique Value Counts for 'citation_under_idr':
+citation_under_idr
+N    406204
+Y       585
+Name: count, dtype: int64
+2025-02-13 22:07:07,157 - INFO - Unique Value Counts for 'citation_under_iidr':
+citation_under_iidr
+N    406681
+Y       108
+Name: count, dtype: int64
+2025-02-13 22:07:07,198 - INFO - Unique Value Counts for 'processing_date':
+processing_date
+2025-01-01    406789
+Name: count, dtype: int64
+2025-02-13 22:07:07,201 - INFO - First 5 Rows:
+  cms_certification_number_(ccn)             provider_name  \
+0                         015009  BURNS NURSING HOME, INC.   
+1                         015009  BURNS NURSING HOME, INC.   
+2                         015009  BURNS NURSING HOME, INC.   
+3                         015009  BURNS NURSING HOME, INC.   
+4                         015009  BURNS NURSING HOME, INC.   
+
+       provider_address     city/town state  zip_code survey_date survey_type  \
+0  701 MONROE STREET NW  RUSSELLVILLE    AL     35653  2023-03-02      Health   
+1  701 MONROE STREET NW  RUSSELLVILLE    AL     35653  2023-03-02      Health   
+2  701 MONROE STREET NW  RUSSELLVILLE    AL     35653  2023-03-02      Health   
+3  701 MONROE STREET NW  RUSSELLVILLE    AL     35653  2023-03-02      Health   
+4  701 MONROE STREET NW  RUSSELLVILLE    AL     35653  2019-08-21      Health   
+
+  deficiency_prefix                                deficiency_category  ...  \
+0                 F                     Infection Control Deficiencies  ...   
+1                 F  Resident Assessment and Care Planning Deficien...  ...   
+2                 F              Quality of Life and Care Deficiencies  ...   
+3                 F                        Administration Deficiencies  ...   
+4                 F                       Resident Rights Deficiencies  ...   
+
+                         deficiency_corrected correction_date  \
+0  Deficient, Provider has date of correction      2023-04-06   
+1                         Past Non-Compliance      2023-01-13   
+2                         Past Non-Compliance      2023-01-13   
+3  Deficient, Provider has date of correction      2023-03-17   
+4  Deficient, Provider has date of correction      2019-09-16   
+
+  inspection_cycle standard_deficiency complaint_deficiency  \
+0                1                   Y                    N   
+1                1                   Y                    Y   
+2                1                   Y                    Y   
+3                1                   Y                    Y   
+4                2                   Y                    N   
+
+   infection_control_inspection_deficiency citation_under_idr  \
+0                                        N                  N   
+1                                        N                  N   
+2                                        N                  N   
+3                                        N                  N   
+4                                        N                  N   
+
+  citation_under_iidr                                    location  \
+0                   N  701 MONROE STREET NW,RUSSELLVILLE,AL,35653   
+1                   N  701 MONROE STREET NW,RUSSELLVILLE,AL,35653   
+2                   N  701 MONROE STREET NW,RUSSELLVILLE,AL,35653   
+3                   N  701 MONROE STREET NW,RUSSELLVILLE,AL,35653   
+4                   N  701 MONROE STREET NW,RUSSELLVILLE,AL,35653   
+
+  processing_date  
+0      2025-01-01  
+1      2025-01-01  
+2      2025-01-01  
+3      2025-01-01  
+4      2025-01-01  
+
+[5 rows x 23 columns]
+2025-02-13 22:07:07,201 - INFO - --- End Dataset: nh_citations ---
+
+2025-02-13 22:07:07,201 - INFO - Dataset exploration complete.  See 'dataset_exploration.log' for details.

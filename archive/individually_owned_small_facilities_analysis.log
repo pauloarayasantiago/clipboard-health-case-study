@@ -1,0 +1,110 @@
+2025-02-14 10:30:26,609 - INFO - === Logging Setup Complete ===
+2025-02-14 10:30:26,991 - INFO - Loaded pbj_nurse with shape (1325324, 33)
+2025-02-14 10:30:27,437 - INFO - Loaded pbj_non_nurse with shape (1325324, 82)
+2025-02-14 10:30:27,756 - INFO - Loaded qrp_provider with shape (710016, 16)
+2025-02-14 10:30:27,779 - INFO - Loaded nh_survey with shape (44189, 41)
+2025-02-14 10:30:27,879 - INFO - Loaded nh_quality_mds with shape (251464, 23)
+2025-02-14 10:30:27,952 - INFO - Loaded nh_ownership with shape (144651, 13)
+2025-02-14 10:30:28,224 - INFO - Loaded nh_citations with shape (406789, 23)
+2025-02-14 10:30:28,224 - INFO - === Identifying Individually Owned Small Facilities (<= 120 Residents) ===
+2025-02-14 10:30:28,285 - INFO - Number of small facilities (<= 120 residents) identified: 11992
+2025-02-14 10:30:28,307 - INFO - Number of individually owned facilities identified in nh_ownership: 14197
+2025-02-14 10:30:28,310 - INFO - Number of Individually Owned Small Facilities: 11476
+2025-02-14 10:30:28,588 - INFO - Shape of pbj_nurse for Individually Owned Small Facilities: (1044316, 33)
+2025-02-14 10:30:28,588 - INFO - === Individually Owned Small Facilities Identification Complete ===
+2025-02-14 10:30:28,588 - INFO - === Analyzing RN Staffing Ratio in Individually Owned Small Facilities ===
+2025-02-14 10:30:28,623 - INFO - Summary Statistics for RN Contract Ratio in Individually Owned Small Facilities:
+2025-02-14 10:30:28,626 - INFO - count    91.000000
+mean      0.059946
+std       0.006844
+min       0.051830
+25%       0.053901
+50%       0.058160
+75%       0.068197
+max       0.072776
+Name: contract_rn_ratio, dtype: float64
+2025-02-14 10:30:28,626 - INFO - Average RN Contract Ratio in Individually Owned Small Facilities (Q2 2024): 0.0599
+2025-02-14 10:30:28,626 - INFO - === RN Staffing Ratio Analysis for Individually Owned Small Facilities Complete ===
+2025-02-14 10:30:28,626 - INFO - === Analyzing CNA Intra-Quarter Variation in Individually Owned Small Facilities ===
+2025-02-14 10:30:28,678 - INFO - Correlation between Daily CNA Contract Ratio and Average Census in Individually Owned Small Facilities: -0.4077
+2025-02-14 10:30:28,678 - INFO - Summary Statistics for CNA Contract Ratio in Individually Owned Small Facilities:
+2025-02-14 10:30:28,679 - INFO - count    91.000000
+mean      0.061814
+std       0.008019
+min       0.046662
+25%       0.056241
+50%       0.060376
+75%       0.068868
+max       0.077762
+Name: average_cna_ratio, dtype: float64
+2025-02-14 10:30:28,679 - INFO - === CNA Intra-Quarter Variation Analysis for Individually Owned Small Facilities Complete ===
+2025-02-14 10:30:28,680 - INFO - === Exploring Exclusive Contract & Outlier Facilities among Individually Owned Small Facilities ===
+2025-02-14 10:30:28,688 - INFO - Number of days with >= 99.0% contract RN usage in Individually Owned Small Facilities: 19529
+2025-02-14 10:30:28,689 - INFO - Number of unique Individually Owned Small Facilities with >= 99.0% contract RN usage on at least one day: 1890
+2025-02-14 10:30:28,745 - INFO - Number of outlier Individually Owned Small Facilities (top 5%ile by average RN contract ratio within this segment): 574
+2025-02-14 10:30:28,745 - INFO - Example Outlier Ratio Threshold: 0.3513
+2025-02-14 10:30:28,745 - INFO - === Exclusive Contract & Outlier Facility Exploration for Individually Owned Small Facilities Complete ===
+2025-02-14 10:30:28,745 - INFO - === Analyzing Quality & Deficiencies for Individually Owned Small Facilities with Higher Temp Staffing ===
+2025-02-14 10:30:29,862 - INFO - Correlation between Avg RN Contract Ratio and Total Health Deficiencies in Individually Owned Small Facilities: 0.0781
+2025-02-14 10:30:30,586 - INFO - Correlation between Avg RN Contract Ratio and Quality Score in Individually Owned Small Facilities (score): -0.0163
+2025-02-14 10:30:30,586 - INFO - === Quality & Deficiencies Analysis for Individually Owned Small Facilities Complete ===
+2025-02-14 10:30:30,586 - INFO - === Further Geographic Analysis - State Distribution of Individually Owned Small Facilities ===
+2025-02-14 10:30:30,745 - INFO - State Distribution of Individually Owned Small Facilities (Percentage):
+2025-02-14 10:30:30,746 - INFO - state
+TX    0.090885
+CA    0.076507
+OH    0.073022
+FL    0.042001
+PA    0.040084
+IL    0.039735
+IN    0.039474
+MO    0.034681
+NC    0.030237
+IA    0.029627
+MI    0.029453
+MN    0.026490
+WI    0.026403
+GA    0.023876
+KS    0.022220
+OK    0.022220
+TN    0.022220
+NY    0.020652
+MA    0.020216
+KY    0.019432
+LA    0.017863
+AR    0.017166
+VA    0.016818
+NJ    0.016643
+CO    0.015249
+WA    0.015075
+MS    0.014552
+AL    0.013419
+NE    0.013332
+SC    0.011938
+CT    0.011328
+MD    0.011154
+OR    0.009672
+AZ    0.009585
+WV    0.008714
+UT    0.007755
+SD    0.006884
+ME    0.006623
+ID    0.006448
+ND    0.005141
+NH    0.004967
+NM    0.004880
+MT    0.004618
+RI    0.004357
+NV    0.003660
+HI    0.003137
+DE    0.002614
+VT    0.002527
+WY    0.002091
+AK    0.001133
+DC    0.000697
+PR    0.000523
+Name: proportion, dtype: float64
+2025-02-14 10:30:30,746 - INFO - === Geographic Analysis of Individually Owned Small Facilities Complete ===
+2025-02-14 10:30:30,746 - INFO - === Comprehensive Analysis of Individually Owned Small Facilities Completed ===
+2025-02-14 10:30:30,747 - INFO - Logs saved to: individually_owned_small_facilities_analysis.log
+2025-02-14 10:30:30,774 - INFO - output-b31ec261-f37d-462c-b2c1-ec81f2130448

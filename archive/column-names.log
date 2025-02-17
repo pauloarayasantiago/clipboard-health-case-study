@@ -1,0 +1,128 @@
+2025-02-14 11:12:40,027 - INFO - === Logging Setup Complete ===
+2025-02-14 11:12:40,359 - INFO - Loaded pbj_nurse with shape (1325324, 33)
+2025-02-14 11:12:40,737 - INFO - Loaded pbj_non_nurse with shape (1325324, 82)
+2025-02-14 11:12:41,034 - INFO - Loaded qrp_provider with shape (710016, 16)
+2025-02-14 11:12:41,057 - INFO - Loaded nh_survey with shape (44189, 41)
+2025-02-14 11:12:41,168 - INFO - Loaded nh_quality_mds with shape (251464, 23)
+2025-02-14 11:12:41,254 - INFO - Loaded nh_ownership with shape (144651, 13)
+2025-02-14 11:12:41,500 - INFO - Loaded nh_citations with shape (406789, 23)
+2025-02-14 11:12:41,500 - INFO - === Data Loading Complete ===
+2025-02-14 11:12:41,506 - INFO - === Data Loading Complete ===
+2025-02-14 11:12:41,513 - INFO - === Inspecting Columns of ALL Loaded Datasets ===
+2025-02-14 11:12:41,513 - INFO - --- Columns in 'pbj_nurse' dataset ---
+2025-02-14 11:12:41,513 - INFO - ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_rndon', 'hrs_rndon_emp', 'hrs_rndon_ctr', 'hrs_rnadmin', 'hrs_rnadmin_emp', 'hrs_rnadmin_ctr', 'hrs_rn', 'hrs_rn_emp', 'hrs_rn_ctr', 'hrs_lpnadmin', 'hrs_lpnadmin_emp', 'hrs_lpnadmin_ctr', 'hrs_lpn', 'hrs_lpn_emp', 'hrs_lpn_ctr', 'hrs_cna', 'hrs_cna_emp', 'hrs_cna_ctr', 'hrs_natrn', 'hrs_natrn_emp', 'hrs_natrn_ctr', 'hrs_medaide', 'hrs_medaide_emp', 'hrs_medaide_ctr']
+2025-02-14 11:12:41,513 - INFO - --- End Columns for 'pbj_nurse' dataset ---
+2025-02-14 11:12:41,514 - INFO - --- Columns in 'pbj_non_nurse' dataset ---
+2025-02-14 11:12:41,514 - INFO - ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_admin', 'hrs_admin_emp', 'hrs_admin_ctr', 'hrs_admin_fn', 'hrs_meddir', 'hrs_meddir_emp', 'hrs_meddir_ctr', 'hrs_othmd', 'hrs_othmd_emp', 'hrs_othmd_ctr', 'hrs_pa', 'hrs_pa_emp', 'hrs_pa_ctr', 'hrs_np', 'hrs_np_emp', 'hrs_np_ctr', 'hrs_clinnrsspec', 'hrs_clinnrsspec_emp', 'hrs_clinnrsspec_ctr', 'hrs_pharmacist', 'hrs_pharmacist_emp', 'hrs_pharmacist_ctr', 'hrs_dietician', 'hrs_dietician_emp', 'hrs_dietician_ctr', 'hrs_feedasst', 'hrs_feedasst_emp', 'hrs_feedasst_ctr', 'hrs_ot', 'hrs_ot_emp', 'hrs_ot_ctr', 'hrs_otasst', 'hrs_otasst_emp', 'hrs_otasst_ctr', 'hrs_otaide', 'hrs_otaide_emp', 'hrs_otaide_ctr', 'hrs_pt', 'hrs_pt_emp', 'hrs_pt_ctr', 'hrs_ptasst', 'hrs_ptasst_emp', 'hrs_ptasst_ctr', 'hrs_ptaide', 'hrs_ptaide_emp', 'hrs_ptaide_ctr', 'hrs_respther', 'hrs_respther_emp', 'hrs_respther_ctr', 'hrs_resptech', 'hrs_resptech_emp', 'hrs_resptech_ctr', 'hrs_spclangpath', 'hrs_spclangpath_emp', 'hrs_spclangpath_ctr', 'hrs_therrecspec', 'hrs_therrecspec_emp', 'hrs_therrecspec_ctr', 'hrs_qualactvprof', 'hrs_qualactvprof_emp', 'hrs_qualactvprof_ctr', 'hrs_othactv', 'hrs_othactv_emp', 'hrs_othactv_ctr', 'hrs_qualsocwrk', 'hrs_qualsocwrk_emp', 'hrs_qualsocwrk_ctr', 'hrs_othsocwrk', 'hrs_othsocwrk_emp', 'hrs_othsocwrk_ctr', 'hrs_mhsvc', 'hrs_mhsvc_emp', 'hrs_mhsvc_ctr']
+2025-02-14 11:12:41,514 - INFO - --- End Columns for 'pbj_non_nurse' dataset ---
+2025-02-14 11:12:41,514 - INFO - --- Columns in 'qrp_provider' dataset ---
+2025-02-14 11:12:41,514 - INFO - ['cms_certification_number_(ccn)', 'provider_name', 'address_line_1', 'city/town', 'state', 'zip_code', 'county/parish', 'telephone_number', 'cms_region', 'measure_code', 'score', 'footnote', 'start_date', 'end_date', 'measure_date_range', 'location1']
+2025-02-14 11:12:41,514 - INFO - --- End Columns for 'qrp_provider' dataset ---
+2025-02-14 11:12:41,514 - INFO - --- Columns in 'nh_survey' dataset ---
+2025-02-14 11:12:41,514 - INFO - ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'inspection_cycle', 'health_survey_date', 'fire_safety_survey_date', 'total_number_of_health_deficiencies', 'total_number_of_fire_safety_deficiencies', 'count_of_freedom_from_abuse_and_neglect_and_exploitation_deficiencies', 'count_of_quality_of_life_and_care_deficiencies', 'count_of_resident_assessment_and_care_planning_deficiencies', 'count_of_nursing_and_physician_services_deficiencies', 'count_of_resident_rights_deficiencies', 'count_of_nutrition_and_dietary_deficiencies', 'count_of_pharmacy_service_deficiencies', 'count_of_environmental_deficiencies', 'count_of_administration_deficiencies', 'count_of_infection_control_deficiencies', 'count_of_emergency_preparedness_deficiencies', 'count_of_automatic_sprinkler_systems_deficiencies', 'count_of_construction_deficiencies', 'count_of_services_deficiencies', 'count_of_corridor_walls_and_doors_deficiencies', 'count_of_egress_deficiencies', 'count_of_electrical_deficiencies', 'count_of_emergency_plans_and_fire_drills_deficiencies', 'count_of_fire_alarm_systems_deficiencies', 'count_of_smoke_deficiencies', 'count_of_interior_deficiencies', 'count_of_gas_and_vacuum_and_electrical_systems_deficiencies', 'count_of_hazardous_area_deficiencies', 'count_of_illumination_and_emergency_power_deficiencies', 'count_of_laboratories_deficiencies', 'count_of_medical_gases_and_anaesthetizing_areas_deficiencies', 'count_of_smoking_regulations_deficiencies', 'count_of_miscellaneous_deficiencies', 'location', 'processing_date']
+2025-02-14 11:12:41,514 - INFO - --- End Columns for 'nh_survey' dataset ---
+2025-02-14 11:12:41,514 - INFO - --- Columns in 'nh_quality_mds' dataset ---
+2025-02-14 11:12:41,514 - INFO - ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'measure_code', 'measure_description', 'resident_type', 'q1_measure_score', 'footnote_for_q1_measure_score', 'q2_measure_score', 'footnote_for_q2_measure_score', 'q3_measure_score', 'footnote_for_q3_measure_score', 'q4_measure_score', 'footnote_for_q4_measure_score', 'four_quarter_average_score', 'footnote_for_four_quarter_average_score', 'used_in_quality_measure_five_star_rating', 'measure_period', 'location', 'processing_date']
+2025-02-14 11:12:41,514 - INFO - --- End Columns for 'nh_quality_mds' dataset ---
+2025-02-14 11:12:41,514 - INFO - --- Columns in 'nh_ownership' dataset ---
+2025-02-14 11:12:41,514 - INFO - ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'role_played_by_owner_or_manager_in_facility', 'owner_type', 'owner_name', 'ownership_percentage', 'association_date', 'location', 'processing_date']
+2025-02-14 11:12:41,514 - INFO - --- End Columns for 'nh_ownership' dataset ---
+2025-02-14 11:12:41,514 - INFO - --- Columns in 'nh_citations' dataset ---
+2025-02-14 11:12:41,514 - INFO - ['cms_certification_number_(ccn)', 'provider_name', 'provider_address', 'city/town', 'state', 'zip_code', 'survey_date', 'survey_type', 'deficiency_prefix', 'deficiency_category', 'deficiency_tag_number', 'deficiency_description', 'scope_severity_code', 'deficiency_corrected', 'correction_date', 'inspection_cycle', 'standard_deficiency', 'complaint_deficiency', 'infection_control_inspection_deficiency', 'citation_under_idr', 'citation_under_iidr', 'location', 'processing_date']
+2025-02-14 11:12:41,514 - INFO - --- End Columns for 'nh_citations' dataset ---
+2025-02-14 11:12:41,514 - INFO - === Column Inspection for ALL Datasets Complete ===
+2025-02-14 11:12:41,522 - INFO - === Data Preparation and Calculations ===
+2025-02-14 11:12:43,470 - INFO - === Data Preparation Calculations Complete ===
+2025-02-14 11:12:43,480 - INFO - === Story 1 Visualizations and Stats - Weekend Coverage Crisis & Exclusive Contract Days ===
+2025-02-14 11:12:43,555 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,558 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,606 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,607 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,607 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,610 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,656 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,657 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,657 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,660 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,661 - INFO - Line chart 'story1_line_day_of_week_rn_ratio.png' created.
+2025-02-14 11:12:43,677 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,677 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,677 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,680 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,691 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,691 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,692 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,692 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,692 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,723 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,724 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,724 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,727 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,760 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,761 - ERROR - C:\Users\paulo\AppData\Local\Temp\ipykernel_36144\2676141477.py:24: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x=day_of_week_exclusive_days.index, y=day_of_week_exclusive_days.values, palette="viridis")
+2025-02-14 11:12:43,765 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,830 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,831 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,831 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,834 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,870 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,870 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,871 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,873 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,875 - INFO - Bar chart 'story1_bar_day_of_week_exclusive_days.png' created.
+2025-02-14 11:12:43,888 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,888 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,888 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,891 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,900 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,900 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,901 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,901 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,901 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,938 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,939 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,940 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,943 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-14 11:12:43,978 - INFO - Quality Metrics Comparison Table:
+2025-02-14 11:12:43,980 - INFO - Metric Facilities with Exclusive Contract Days  \
+0  Average Total Health Deficiencies                                    7.74   
+1      Average Quality Score (score)                                     N/A   
+
+  All Facilities  
+0           7.01  
+1            N/A
+2025-02-14 11:12:43,980 - INFO - === Story 1 Visualizations and Stats Complete ===
+2025-02-14 11:12:43,990 - INFO - === Story 2 Visualizations and Stats - Large Facilities, CNAs & Support Staff ===
+2025-02-14 11:12:44,314 - ERROR - C:\Users\paulo\AppData\Local\Temp\ipykernel_36144\1132975495.py:19: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x=cluster_rn_ratio.index, y=cluster_rn_ratio.values, palette="muted")
+2025-02-14 11:12:44,401 - INFO - Bar chart 'story2_bar_rn_ratio_by_size.png' created.
+2025-02-14 11:12:44,476 - ERROR - C:\Users\paulo\AppData\Local\Temp\ipykernel_36144\1132975495.py:33: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x=overall_rn_cna_ratio.index, y=overall_rn_cna_ratio.values, palette="pastel")
+2025-02-14 11:12:44,545 - INFO - Bar chart 'story2_bar_rn_cna_overall.png' created.
+2025-02-14 11:12:44,609 - ERROR - C:\Users\paulo\AppData\Local\Temp\ipykernel_36144\1132975495.py:50: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x='Role', y='Average Contract Ratio', data=overall_rn_non_nurse_ratio_comparison, palette="Set2")
+2025-02-14 11:12:44,671 - INFO - Bar chart 'story2_bar_rn_vs_non_nurse.png' created.
+2025-02-14 11:12:44,718 - INFO - === Story 2 Visualizations and Stats Complete ===
+2025-02-14 11:12:44,725 - INFO - === Story 3 Visualizations and Stats - Individually Owned Small Facilities: Simplicity & Value ===
+2025-02-14 11:12:44,739 - ERROR - C:\Users\paulo\AppData\Local\Temp\ipykernel_36144\2024974781.py:16: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x='Facility Group', y='Average RN Contract Ratio', data=avg_rn_ratios_comparison, palette="Paired")
+2025-02-14 11:12:44,831 - INFO - Bar chart 'story3_bar_rn_ratio_comparison.png' created.
+2025-02-14 11:12:44,973 - INFO - Statistic Highlight: Individually Owned Small Facilities still experience 19529 'Exclusive Contract RN Days' across Q2 2024, affecting 1890 unique facilities.
+2025-02-14 11:12:45,025 - INFO - Pie chart 'story3_pie_ownership_small_facilities.png' created.
+2025-02-14 11:12:45,048 - INFO - === Story 3 Visualizations and Stats Complete ===

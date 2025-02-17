@@ -1,0 +1,11 @@
+2025-02-13 22:02:41,203 - INFO - === Starting Process Phase Notebook: Logging Setup Complete ===
+2025-02-13 22:02:41,235 - INFO - output-f6e0d955-86c9-477e-9045-51b7e9bb6df4
+2025-02-13 22:02:47,908 - INFO - Loaded pbj_nurse with shape (1325324, 33)
+2025-02-13 22:02:48,265 - INFO - Loaded pbj_non_nurse with shape (1325324, 82)
+2025-02-13 22:02:48,566 - INFO - Loaded qrp_provider with shape (710016, 16)
+2025-02-13 22:02:48,599 - INFO - Loaded nh_survey with shape (44189, 41)
+2025-02-13 22:02:48,709 - INFO - Loaded nh_quality_mds with shape (251464, 23)
+2025-02-13 22:02:48,792 - INFO - Loaded nh_ownership with shape (144651, 13)
+2025-02-13 22:02:49,045 - INFO - Loaded nh_citations with shape (406789, 23)
+2025-02-13 22:02:49,045 - INFO - Columns in pbj_nurse:
+2025-02-13 22:02:49,045 - INFO - ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_rndon', 'hrs_rndon_emp', 'hrs_rndon_ctr', 'hrs_rnadmin', 'hrs_rnadmin_emp', 'hrs_rnadmin_ctr', 'hrs_rn', 'hrs_rn_emp', 'hrs_rn_ctr', 'hrs_lpnadmin', 'hrs_lpnadmin_emp', 'hrs_lpnadmin_ctr', 'hrs_lpn', 'hrs_lpn_emp', 'hrs_lpn_ctr', 'hrs_cna', 'hrs_cna_emp', 'hrs_cna_ctr', 'hrs_natrn', 'hrs_natrn_emp', 'hrs_natrn_ctr', 'hrs_medaide', 'hrs_medaide_emp', 'hrs_medaide_ctr']

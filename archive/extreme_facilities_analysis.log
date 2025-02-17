@@ -1,0 +1,440 @@
+2025-02-15 13:19:38,104 - INFO - === Logging Setup Complete ===
+2025-02-15 13:19:39,742 - INFO - Loaded pbj_nurse with shape (1325324, 33)
+2025-02-15 13:19:40,211 - INFO - Loaded pbj_non_nurse with shape (1325324, 82)
+2025-02-15 13:19:40,521 - INFO - Loaded qrp_provider with shape (710016, 16)
+2025-02-15 13:19:40,554 - INFO - Loaded nh_survey with shape (44189, 41)
+2025-02-15 13:19:40,662 - INFO - Loaded nh_quality_mds with shape (251464, 23)
+2025-02-15 13:19:40,741 - INFO - Loaded nh_ownership with shape (144651, 13)
+2025-02-15 13:19:41,007 - INFO - Loaded nh_citations with shape (406789, 23)
+2025-02-15 13:19:41,227 - INFO - Facility-level RN aggregation complete. Sample:
+2025-02-15 13:19:41,230 - INFO - provnum  hrs_rn_emp  hrs_rn_ctr  mdscensus  total_rn_hours  rn_temp_ratio
+0  015009     4578.61         0.0  53.285714         4578.61            0.0
+1  015010     2445.00         0.0  77.483516         2445.00            0.0
+2  015012     3165.00         0.0  44.406593         3165.00            0.0
+3  015014     3562.48         0.0  72.780220         3562.48            0.0
+4  015015     3214.55         0.0  91.846154         3214.55            0.0
+2025-02-15 13:19:41,237 - INFO - Top 1% Facilities by RN Contract Hours:
+2025-02-15 13:19:41,244 - INFO - hrs_rn_ctr  rn_temp_ratio  total_rn_hours   mdscensus
+count    146.000000     146.000000      146.000000  146.000000
+mean    6373.617055       0.528916    13942.691164  202.276908
+std     4140.076782       0.229733     8607.874344  121.604276
+min     3483.250000       0.129508     3856.210000   30.340659
+25%     4075.050000       0.356882     7931.657500  113.461538
+50%     5024.250000       0.503391    11618.430000  178.082418
+75%     6590.500000       0.699869    16960.860000  256.403846
+max    30647.310000       1.000000    47402.960000  732.263736
+2025-02-15 13:19:41,245 - INFO - Number of extreme contract facilities:
+2025-02-15 13:19:41,245 - INFO - 146
+2025-02-15 13:19:41,252 - INFO - Top 1% Facilities by RN Employee Hours:
+2025-02-15 13:19:41,261 - INFO - hrs_rn_emp  rn_temp_ratio  total_rn_hours   mdscensus
+count    146.000000     146.000000      146.000000  146.000000
+mean   18957.535342       0.060139    20410.991370  239.859100
+std     7773.351965       0.090651     8607.781381  128.197905
+min    12804.410000       0.000000    12807.970000   27.549451
+25%    14234.547500       0.000000    15067.500000  151.074176
+50%    16683.620000       0.008022    17860.590000  203.994505
+75%    20253.110000       0.097594    21785.365000  302.467033
+max    69955.240000       0.442994    72428.520000  683.175824
+2025-02-15 13:19:41,261 - INFO - Number of extreme employee facilities:
+2025-02-15 13:19:41,261 - INFO - 146
+2025-02-15 13:19:41,643 - INFO - Merged facility RN data with qrp_provider. Sample:
+2025-02-15 13:19:41,649 - INFO - provnum  hrs_rn_emp  hrs_rn_ctr  mdscensus  total_rn_hours  rn_temp_ratio  \
+0  015009     4578.61         0.0  53.285714         4578.61            0.0   
+1  015009     4578.61         0.0  53.285714         4578.61            0.0   
+2  015009     4578.61         0.0  53.285714         4578.61            0.0   
+3  015009     4578.61         0.0  53.285714         4578.61            0.0   
+4  015009     4578.61         0.0  53.285714         4578.61            0.0   
+
+              provider_name        address_line_1     city/town state  ...  \
+0  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL  ...   
+1  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL  ...   
+2  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL  ...   
+3  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL  ...   
+4  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL  ...   
+
+   county/parish telephone_number cms_region               measure_code  \
+0       Franklin    (256)332-4110        4.0  S_004_01_PPR_PD_COMP_PERF   
+1       Franklin    (256)332-4110        4.0        S_004_01_PPR_PD_OBS   
+2       Franklin    (256)332-4110        4.0  S_004_01_PPR_PD_OBS_READM   
+3       Franklin    (256)332-4110        4.0       S_004_01_PPR_PD_RSRR   
+4       Franklin    (256)332-4110        4.0   S_004_01_PPR_PD_RSRR_2_5   
+
+                                 score footnote start_date   end_date  \
+0  No Different than the National Rate        - 2021-10-01 2023-09-30   
+1                                 5.38        - 2021-10-01 2023-09-30   
+2                                    5        - 2021-10-01 2023-09-30   
+3                                 9.02        - 2021-10-01 2023-09-30   
+4                                 6.25        - 2021-10-01 2023-09-30   
+
+  measure_date_range                                      location1  
+0                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+1                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+2                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+3                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+4                  -  701 MONROE STREET NW, RUSSELLVILLE, AL, 35653  
+
+[5 rows x 21 columns]
+2025-02-15 13:19:41,668 - INFO - Merged facility RN data with nh_survey deficiencies. Sample:
+2025-02-15 13:19:41,670 - INFO - provnum  hrs_rn_emp  hrs_rn_ctr  mdscensus  total_rn_hours  rn_temp_ratio  \
+0  015009     4578.61         0.0  53.285714         4578.61            0.0   
+1  015009     4578.61         0.0  53.285714         4578.61            0.0   
+2  015009     4578.61         0.0  53.285714         4578.61            0.0   
+3  015010     2445.00         0.0  77.483516         2445.00            0.0   
+4  015010     2445.00         0.0  77.483516         2445.00            0.0   
+
+   total_number_of_health_deficiencies  
+0                                  4.0  
+1                                  2.0  
+2                                  1.0  
+3                                  0.0  
+4                                  1.0
+2025-02-15 13:19:41,741 - INFO - Merged facility RN data with nh_quality_mds. Sample:
+2025-02-15 13:19:41,743 - INFO - provnum  hrs_rn_emp  hrs_rn_ctr  mdscensus  total_rn_hours  rn_temp_ratio  \
+0  015009     4578.61         0.0  53.285714         4578.61            0.0   
+1  015009     4578.61         0.0  53.285714         4578.61            0.0   
+2  015009     4578.61         0.0  53.285714         4578.61            0.0   
+3  015009     4578.61         0.0  53.285714         4578.61            0.0   
+4  015009     4578.61         0.0  53.285714         4578.61            0.0   
+
+   four_quarter_average_score  
+0                    7.339450  
+1                    9.756098  
+2                    4.457566  
+3                    1.117318  
+4                    0.000000
+2025-02-15 13:19:41,809 - INFO - Merged facility RN data with nh_ownership. Sample:
+2025-02-15 13:19:41,812 - INFO - provnum  hrs_rn_emp  hrs_rn_ctr  mdscensus  total_rn_hours  rn_temp_ratio  \
+0  015009     4578.61         0.0  53.285714         4578.61            0.0   
+1  015009     4578.61         0.0  53.285714         4578.61            0.0   
+2  015009     4578.61         0.0  53.285714         4578.61            0.0   
+3  015009     4578.61         0.0  53.285714         4578.61            0.0   
+4  015009     4578.61         0.0  53.285714         4578.61            0.0   
+
+              provider_name      provider_address     city/town state  \
+0  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL   
+1  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL   
+2  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL   
+3  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL   
+4  BURNS NURSING HOME, INC.  701 MONROE STREET NW  RUSSELLVILLE    AL   
+
+   zip_code role_played_by_owner_or_manager_in_facility  owner_type  \
+0   35653.0     5% OR GREATER DIRECT OWNERSHIP INTEREST  Individual   
+1   35653.0     5% OR GREATER DIRECT OWNERSHIP INTEREST  Individual   
+2   35653.0                          CORPORATE DIRECTOR  Individual   
+3   35653.0                           CORPORATE OFFICER  Individual   
+4   35653.0                           CORPORATE OFFICER  Individual   
+
+         owner_name ownership_percentage association_date  \
+0  DEARMAN, CAMERON                   5%              NaT   
+1   DEARMAN, MARTHA                  81%              NaT   
+2   DEARMAN, MARTHA       NOT APPLICABLE              NaT   
+3  DEARMAN, CAMERON       NOT APPLICABLE              NaT   
+4     DEARMAN, MARK       NOT APPLICABLE              NaT   
+
+                                     location processing_date  
+0  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+1  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+2  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+3  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01  
+4  701 MONROE STREET NW,RUSSELLVILLE,AL,35653      2025-01-01
+2025-02-15 13:19:41,861 - INFO - Merged facility RN data with nh_citations. Sample:
+2025-02-15 13:19:41,863 - INFO - provnum  hrs_rn_emp  hrs_rn_ctr  mdscensus  total_rn_hours  rn_temp_ratio  \
+0  015009     4578.61         0.0  53.285714         4578.61            0.0   
+1  015010     2445.00         0.0  77.483516         2445.00            0.0   
+2  015012     3165.00         0.0  44.406593         3165.00            0.0   
+3  015014     3562.48         0.0  72.780220         3562.48            0.0   
+4  015015     3214.55         0.0  91.846154         3214.55            0.0   
+
+   citation_count  
+0             7.0  
+1             5.0  
+2             6.0  
+3             8.0  
+4            13.0
+2025-02-15 13:19:43,064 - INFO - Characteristics of Facilities in the Top 1% of RN Contract Use:
+2025-02-15 13:19:46,539 - INFO - provnum    hrs_rn_emp    hrs_rn_ctr     mdscensus  total_rn_hours  \
+count   3388032  3.388032e+06  3.388032e+06  3.388032e+06    3.388032e+06   
+unique      146           NaN           NaN           NaN             NaN   
+top      335491           NaN           NaN           NaN             NaN   
+freq      93024           NaN           NaN           NaN             NaN   
+mean        NaN  9.470607e+03  6.507644e+03  2.196292e+02    1.597825e+04   
+min         NaN  0.000000e+00  3.483250e+03  3.034066e+01    3.856210e+03   
+25%         NaN  2.861950e+03  4.002070e+03  1.133407e+02    8.037250e+03   
+50%         NaN  6.696500e+03  5.307220e+03  1.787473e+02    1.267470e+04   
+75%         NaN  1.226089e+04  7.120670e+03  2.772775e+02    2.084884e+04   
+max         NaN  3.967373e+04  3.064731e+04  7.322637e+02    4.740296e+04   
+std         NaN  9.258503e+03  4.164556e+03  1.393047e+02    1.052322e+04   
+
+        rn_temp_ratio                   provider_name         address_line_1  \
+count    3.388032e+06                         3388032                3388032   
+unique            NaN                             146                    146   
+top               NaN  THE NEW JEWISH HOME, MANHATTAN  120 WEST 106TH STREET   
+freq              NaN                           93024                  93024   
+mean     4.925038e-01                             NaN                    NaN   
+min      1.295083e-01                             NaN                    NaN   
+25%      3.229275e-01                             NaN                    NaN   
+50%      4.439013e-01                             NaN                    NaN   
+75%      6.592102e-01                             NaN                    NaN   
+max      1.000000e+00                             NaN                    NaN   
+std      2.292262e-01                             NaN                    NaN   
+
+       city/town  state_x  ...          score footnote  \
+count    3388032  3388032  ...        3388032  3388032   
+unique        92       28  ...           2411        4   
+top     BROOKLYN       NY  ...  Not Available        -   
+freq      332928  1733184  ...         186813  3171741   
+mean         NaN      NaN  ...            NaN      NaN   
+min          NaN      NaN  ...            NaN      NaN   
+25%          NaN      NaN  ...            NaN      NaN   
+50%          NaN      NaN  ...            NaN      NaN   
+75%          NaN      NaN  ...            NaN      NaN   
+max          NaN      NaN  ...            NaN      NaN   
+std          NaN      NaN  ...            NaN      NaN   
+
+                           start_date                       end_date  \
+count                         3388032                        3388032   
+unique                            NaN                            NaN   
+top                               NaN                            NaN   
+freq                              NaN                            NaN   
+mean    2022-10-02 18:00:00.000001536  2024-01-03 07:29:59.999999232   
+min               2021-10-01 00:00:00            2023-09-30 00:00:00   
+25%               2021-10-01 00:00:00            2023-09-30 00:00:00   
+50%               2023-04-01 00:00:00            2024-03-31 00:00:00   
+75%               2023-04-01 00:00:00            2024-03-31 00:00:00   
+max               2024-01-01 00:00:00            2024-03-31 00:00:00   
+std                               NaN                            NaN   
+
+       measure_date_range                                   location1  \
+count             3388032                                     3388032   
+unique                  1                                         146   
+top                     -  120 WEST 106TH STREET, NEW YORK, NY, 10025   
+freq              3388032                                       93024   
+mean                  NaN                                         NaN   
+min                   NaN                                         NaN   
+25%                   NaN                                         NaN   
+50%                   NaN                                         NaN   
+75%                   NaN                                         NaN   
+max                   NaN                                         NaN   
+std                   NaN                                         NaN   
+
+       total_number_of_health_deficiencies four_quarter_average_score  \
+count                         3.388032e+06               3.349008e+06   
+unique                                 NaN                        NaN   
+top                                    NaN                        NaN   
+freq                                   NaN                        NaN   
+mean                          6.178950e+00               2.691375e+01   
+min                           0.000000e+00               0.000000e+00   
+25%                           2.000000e+00               1.980940e+00   
+50%                           5.000000e+00               9.153713e+00   
+75%                           9.000000e+00               3.544449e+01   
+max                           4.200000e+01               1.000000e+02   
+std                           5.658005e+00               3.427422e+01   
+
+        owner_type  state_y  
+count      3373344  3388032  
+unique           2       28  
+top     Individual       NY  
+freq       2812752  1733184  
+mean           NaN      NaN  
+min            NaN      NaN  
+25%            NaN      NaN  
+50%            NaN      NaN  
+75%            NaN      NaN  
+max            NaN      NaN  
+std            NaN      NaN  
+
+[11 rows x 25 columns]
+2025-02-15 13:19:47,723 - INFO - Characteristics of Facilities in the Top 1% of RN Employee Use:
+2025-02-15 13:19:51,772 - INFO - provnum    hrs_rn_emp    hrs_rn_ctr     mdscensus  total_rn_hours  \
+count   3978000  3.978000e+06  3.978000e+06  3.978000e+06    3.978000e+06   
+unique      146           NaN           NaN           NaN             NaN   
+top      105158           NaN           NaN           NaN             NaN   
+freq     102816           NaN           NaN           NaN             NaN   
+mean        NaN  1.885304e+04  1.923031e+03  2.480509e+02    2.077607e+04   
+min         NaN  1.280441e+04  0.000000e+00  2.754945e+01    1.280797e+04   
+25%         NaN  1.414650e+04  0.000000e+00  1.509560e+02    1.500820e+04   
+50%         NaN  1.723506e+04  3.230300e+02  2.334725e+02    1.851975e+04   
+75%         NaN  2.047233e+04  3.213250e+03  3.481648e+02    2.235825e+04   
+max         NaN  6.995524e+04  1.431738e+04  6.831758e+02    7.242852e+04   
+std         NaN  6.310507e+03  3.054098e+03  1.368636e+02    7.894408e+03   
+
+        rn_temp_ratio                                provider_name  \
+count    3.978000e+06                                      3978000   
+unique            NaN                                          146   
+top               NaN  TALLAHASSEE MEMORIAL HOSPITAL EXTENDED CARE   
+freq              NaN                                       102816   
+mean     7.408585e-02                                          NaN   
+min      0.000000e+00                                          NaN   
+25%      0.000000e+00                                          NaN   
+50%      1.472202e-02                                          NaN   
+75%      1.343549e-01                                          NaN   
+max      4.429936e-01                                          NaN   
+std      1.045899e-01                                          NaN   
+
+         address_line_1 city/town  state_x  ...          score footnote  \
+count           3978000   3978000  3978000  ...        3978000  3978000   
+unique              146       103       24  ...           2480        5   
+top     1609 MEDICAL DR  BROOKLYN       NY  ...  Not Available        -   
+freq             102816    298656  1750320  ...         283815  3649662   
+mean                NaN       NaN      NaN  ...            NaN      NaN   
+min                 NaN       NaN      NaN  ...            NaN      NaN   
+25%                 NaN       NaN      NaN  ...            NaN      NaN   
+50%                 NaN       NaN      NaN  ...            NaN      NaN   
+75%                 NaN       NaN      NaN  ...            NaN      NaN   
+max                 NaN       NaN      NaN  ...            NaN      NaN   
+std                 NaN       NaN      NaN  ...            NaN      NaN   
+
+                           start_date                       end_date  \
+count                         3978000                        3978000   
+unique                            NaN                            NaN   
+top                               NaN                            NaN   
+freq                              NaN                            NaN   
+mean    2022-10-02 18:00:00.000001536  2024-01-03 07:30:00.000000512   
+min               2021-10-01 00:00:00            2023-09-30 00:00:00   
+25%               2021-10-01 00:00:00            2023-09-30 00:00:00   
+50%               2023-04-01 00:00:00            2024-03-31 00:00:00   
+75%               2023-04-01 00:00:00            2024-03-31 00:00:00   
+max               2024-01-01 00:00:00            2024-03-31 00:00:00   
+std                               NaN                            NaN   
+
+       measure_date_range                                location1  \
+count             3978000                                  3978000   
+unique                  1                                      146   
+top                     -  1609 MEDICAL DR, TALLAHASSEE, FL, 32308   
+freq              3978000                                   102816   
+mean                  NaN                                      NaN   
+min                   NaN                                      NaN   
+25%                   NaN                                      NaN   
+50%                   NaN                                      NaN   
+75%                   NaN                                      NaN   
+max                   NaN                                      NaN   
+std                   NaN                                      NaN   
+
+       total_number_of_health_deficiencies four_quarter_average_score  \
+count                         3.978000e+06               3.819456e+06   
+unique                                 NaN                        NaN   
+top                                    NaN                        NaN   
+freq                                   NaN                        NaN   
+mean                          5.827487e+00               2.770260e+01   
+min                           0.000000e+00               0.000000e+00   
+25%                           2.000000e+00               1.791359e+00   
+50%                           5.000000e+00               8.426966e+00   
+75%                           8.000000e+00               3.800937e+01   
+max                           3.700000e+01               1.000000e+02   
+std                           5.258799e+00               3.606087e+01   
+
+        owner_type  state_y  
+count      3951072  3978000  
+unique           2       24  
+top     Individual       NY  
+freq       3488400  1750320  
+mean           NaN      NaN  
+min            NaN      NaN  
+25%            NaN      NaN  
+50%            NaN      NaN  
+75%            NaN      NaN  
+max            NaN      NaN  
+std            NaN      NaN  
+
+[11 rows x 25 columns]
+2025-02-15 13:19:51,777 - INFO - Extreme Contract Use DataFrame Columns:
+2025-02-15 13:19:51,777 - INFO - Index(['provnum', 'hrs_rn_emp', 'hrs_rn_ctr', 'mdscensus', 'total_rn_hours',
+       'rn_temp_ratio', 'provider_name', 'address_line_1', 'city/town',
+       'state_x', 'zip_code', 'county/parish', 'telephone_number',
+       'cms_region', 'measure_code', 'score', 'footnote', 'start_date',
+       'end_date', 'measure_date_range', 'location1',
+       'total_number_of_health_deficiencies', 'four_quarter_average_score',
+       'owner_type', 'state_y'],
+      dtype='object')
+2025-02-15 13:19:51,777 - INFO - Extreme Employee Use DataFrame Columns:
+2025-02-15 13:19:51,778 - INFO - Index(['provnum', 'hrs_rn_emp', 'hrs_rn_ctr', 'mdscensus', 'total_rn_hours',
+       'rn_temp_ratio', 'provider_name', 'address_line_1', 'city/town',
+       'state_x', 'zip_code', 'county/parish', 'telephone_number',
+       'cms_region', 'measure_code', 'score', 'footnote', 'start_date',
+       'end_date', 'measure_date_range', 'location1',
+       'total_number_of_health_deficiencies', 'four_quarter_average_score',
+       'owner_type', 'state_y'],
+      dtype='object')
+2025-02-15 13:19:52,082 - INFO - Extreme Contract Use - Unique State Comparisons:
+2025-02-15 13:19:52,083 - INFO - state_x state_y
+0            AZ      AZ
+26928        DE      DE
+66096        DC      DC
+85680        FL      FL
+151776       GA      GA
+159120       HI      HI
+203184       IL      IL
+541008       IN      IN
+553248       KY      KY
+560592       ME      ME
+695232       MD      MD
+839664       MA      MA
+947376       MN      MN
+1013472      MS      MS
+1018368      NE      NE
+1052640      NJ      NJ
+1086912      NM      NM
+1089360      NY      NY
+2822544      NC      NC
+2834784      OH      OH
+2861712      PA      PA
+3197088      RI      RI
+3226464      TN      TN
+3233808      VT      VT
+3282768      VA      VA
+3358656      WA      WA
+3366000      WI      WI
+3375792      CA      CA
+2025-02-15 13:19:52,425 - INFO - Extreme Employee Use - Unique State Comparisons:
+2025-02-15 13:19:52,426 - INFO - state_x state_y
+0            AZ      AZ
+14688        CA      CA
+129744       DE      DE
+132192       DC      DC
+146880       FL      FL
+514080       GA      GA
+526320       HI      HI
+636480       IL      IL
+805392       IA      IA
+807840       KY      KY
+824976       ME      ME
+876384       MD      MD
+1074672      MA      MA
+1135872      MN      MN
+1444320      NE      NE
+1512864      NH      NH
+1520208      NJ      NJ
+1645056      NY      NY
+3395376      ND      ND
+3441888      OH      OH
+3451680      PA      PA
+3534912      TN      TN
+3542256      WA      WA
+3713616      WI      WI
+2025-02-15 13:19:52,603 - INFO - Extreme Contract Use - Mismatches:
+2025-02-15 13:19:52,604 - INFO - Empty DataFrame
+Columns: [provnum, state_x, state_y]
+Index: []
+2025-02-15 13:19:52,811 - INFO - Extreme Employee Use - Mismatches:
+2025-02-15 13:19:52,811 - INFO - Empty DataFrame
+Columns: [provnum, state_x, state_y]
+Index: []
+2025-02-15 13:19:55,109 - INFO - Updated columns for Extreme Contract Use:
+2025-02-15 13:19:55,109 - INFO - Index(['provnum', 'hrs_rn_emp', 'hrs_rn_ctr', 'mdscensus', 'total_rn_hours',
+       'rn_temp_ratio', 'provider_name', 'address_line_1', 'city/town',
+       'state', 'zip_code', 'county/parish', 'telephone_number', 'cms_region',
+       'measure_code', 'score', 'footnote', 'start_date', 'end_date',
+       'measure_date_range', 'location1',
+       'total_number_of_health_deficiencies', 'four_quarter_average_score',
+       'owner_type'],
+      dtype='object')
+2025-02-15 13:19:55,110 - INFO - Updated columns for Extreme Employee Use:
+2025-02-15 13:19:55,110 - INFO - Index(['provnum', 'hrs_rn_emp', 'hrs_rn_ctr', 'mdscensus', 'total_rn_hours',
+       'rn_temp_ratio', 'provider_name', 'address_line_1', 'city/town',
+       'state', 'zip_code', 'county/parish', 'telephone_number', 'cms_region',
+       'measure_code', 'score', 'footnote', 'start_date', 'end_date',
+       'measure_date_range', 'location1',
+       'total_number_of_health_deficiencies', 'four_quarter_average_score',
+       'owner_type'],
+      dtype='object')
+2025-02-15 13:21:00,736 - INFO - output-3c70b8ea-832b-4650-9d35-678eb565ff30

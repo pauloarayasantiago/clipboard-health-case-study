@@ -1,0 +1,95 @@
+2025-02-13 22:27:42,175 - INFO - === Logging Setup Complete ===
+2025-02-13 22:27:44,839 - INFO - Loaded pbj_nurse with shape (1325324, 33)
+2025-02-13 22:27:45,193 - INFO - Loaded pbj_non_nurse with shape (1325324, 82)
+2025-02-13 22:27:45,484 - INFO - Loaded qrp_provider with shape (710016, 16)
+2025-02-13 22:27:45,512 - INFO - Loaded nh_survey with shape (44189, 41)
+2025-02-13 22:27:45,616 - INFO - Loaded nh_quality_mds with shape (251464, 23)
+2025-02-13 22:27:45,692 - INFO - Loaded nh_ownership with shape (144651, 13)
+2025-02-13 22:27:45,940 - INFO - Loaded nh_citations with shape (406789, 23)
+2025-02-13 22:27:45,943 - INFO - Columns in pbj_nurse:
+2025-02-13 22:27:45,943 - INFO - ['provnum', 'provname', 'city', 'state', 'county_name', 'county_fips', 'cy_qtr', 'workdate', 'mdscensus', 'hrs_rndon', 'hrs_rndon_emp', 'hrs_rndon_ctr', 'hrs_rnadmin', 'hrs_rnadmin_emp', 'hrs_rnadmin_ctr', 'hrs_rn', 'hrs_rn_emp', 'hrs_rn_ctr', 'hrs_lpnadmin', 'hrs_lpnadmin_emp', 'hrs_lpnadmin_ctr', 'hrs_lpn', 'hrs_lpn_emp', 'hrs_lpn_ctr', 'hrs_cna', 'hrs_cna_emp', 'hrs_cna_ctr', 'hrs_natrn', 'hrs_natrn_emp', 'hrs_natrn_ctr', 'hrs_medaide', 'hrs_medaide_emp', 'hrs_medaide_ctr']
+2025-02-13 22:27:46,375 - INFO - Daily Nursing Temporary Staffing Ratios (first 10 rows):
+2025-02-13 22:27:46,379 - INFO - provnum   workdate  total_nurse_emp  total_nurse_ctr  nursing_daily_ratio
+0  015009 2024-04-01           241.28              0.0                  0.0
+1  015009 2024-04-02           214.45              0.0                  0.0
+2  015009 2024-04-03           232.06              0.0                  0.0
+3  015009 2024-04-04           207.32              0.0                  0.0
+4  015009 2024-04-05           219.40              0.0                  0.0
+5  015009 2024-04-06           175.02              0.0                  0.0
+6  015009 2024-04-07           162.22              0.0                  0.0
+7  015009 2024-04-08           206.41              0.0                  0.0
+8  015009 2024-04-09           235.23              0.0                  0.0
+9  015009 2024-04-10           220.70              0.0                  0.0
+2025-02-13 22:27:46,400 - INFO - Average Daily Nursing Temporary Staffing Ratios (first 10 rows):
+2025-02-13 22:27:46,401 - INFO - workdate  avg_nursing_daily_ratio
+0 2024-04-01                 0.073250
+1 2024-04-02                 0.068307
+2 2024-04-03                 0.066594
+3 2024-04-04                 0.069461
+4 2024-04-05                 0.076668
+5 2024-04-06                 0.082368
+6 2024-04-07                 0.083790
+7 2024-04-08                 0.073759
+8 2024-04-09                 0.066952
+9 2024-04-10                 0.066311
+2025-02-13 22:27:46,405 - INFO - Nursing Temporary Staffing Ratios by Day of Week:
+2025-02-13 22:27:46,406 - INFO - day_of_week  mean_ratio  std_ratio
+0      Friday    0.074028   0.002144
+1      Monday    0.070774   0.002152
+2    Saturday    0.081821   0.001716
+3      Sunday    0.082921   0.002243
+4    Thursday    0.065573   0.002313
+5     Tuesday    0.064303   0.002527
+6   Wednesday    0.063154   0.002646
+2025-02-13 22:27:47,295 - INFO - Daily Non-Nursing Temporary Staffing Ratios (first 10 rows):
+2025-02-13 22:27:47,297 - INFO - provnum   workdate  total_non_nurse_emp  total_non_nurse_ctr  \
+0  015009 2024-04-01                38.66                25.25   
+1  015009 2024-04-02                31.44                20.00   
+2  015009 2024-04-03                41.29                23.75   
+3  015009 2024-04-04                31.20                24.50   
+4  015009 2024-04-05                40.31                20.00   
+5  015009 2024-04-06                16.00                 0.00   
+6  015009 2024-04-07                22.57                 0.00   
+7  015009 2024-04-08                39.38                21.75   
+8  015009 2024-04-09                33.12                19.25   
+9  015009 2024-04-10                24.97                23.50   
+
+   non_nursing_daily_ratio  
+0                 0.395087  
+1                 0.388802  
+2                 0.365160  
+3                 0.439856  
+4                 0.331620  
+5                 0.000000  
+6                 0.000000  
+7                 0.355799  
+8                 0.367577  
+9                 0.484836
+2025-02-13 22:27:47,318 - INFO - Average Daily Non-Nursing Temporary Staffing Ratios (first 10 rows):
+2025-02-13 22:27:47,319 - INFO - workdate  avg_non_nursing_daily_ratio
+0 2024-04-01                     0.274441
+1 2024-04-02                     0.269590
+2 2024-04-03                     0.268942
+3 2024-04-04                     0.267964
+4 2024-04-05                     0.265831
+5 2024-04-06                     0.261070
+6 2024-04-07                     0.238981
+7 2024-04-08                     0.259349
+8 2024-04-09                     0.267317
+9 2024-04-10                     0.268425
+2025-02-13 22:27:47,322 - INFO - Non-Nursing Temporary Staffing Ratios by Day of Week:
+2025-02-13 22:27:47,323 - INFO - day_of_week  mean_ratio  std_ratio
+0      Friday    0.259972   0.003206
+1      Monday    0.270508   0.019746
+2    Saturday    0.251784   0.006390
+3      Sunday    0.230654   0.021637
+4    Thursday    0.263503   0.002898
+5     Tuesday    0.264905   0.002671
+6   Wednesday    0.265214   0.002855
+2025-02-13 22:27:47,323 - INFO - === Intra-Quarter Staffing Pattern Analysis Complete ===
+2025-02-13 22:30:54,196 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-13 22:30:54,203 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-13 22:30:54,313 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-13 22:30:54,317 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-02-13 22:31:13,853 - INFO - Overall correlation between Nursing Temporary Staffing Ratio and Resident Census:
+2025-02-13 22:31:13,853 - INFO - 0.05820623188463696
