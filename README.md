@@ -151,7 +151,15 @@ How is it possible that CNA accounts for so many hours with such a small percent
 
 Well that is explained in the way high contract days were calculated in the beginning of this analysis. A high contract days represents when ANY of the categories has over 99% contract usage... This is to emphasize the days the facilities might be short staffed or to detect particular staffing practices. Regardless, this doesn't disprove the enormous need for temporary CNA's across the board. They are needed on Tuesdays, Sundays, small and large. Even though the very large facilities don't amount any temporary CNA hours on high contract days, that does not mean that further analysis won't uncover that any given day they do require plenty.
 
-![Percentage of Total Hours](plots/percentage-total-hour.png)
+![Contract Usage by Day](plots/contract-usage-by-day.png)
+![Days vs. Hours](plots/days-vs-hours.png)
+![Distribution of Facility Census](plots/distribution-of-facility-census.png)
+![Distribution of High Contract Days by Day of Week](plots/distribution-of-high-contract-days-by-day-of-week.png)
+![Facility Counts by Size Category](plots/facility-counts-by-size-category.png)
+![High Contract by Staff](plots/high-contract-by-staff.png)
+![Hours Distribution](plots/hours-distribution.png)
+![Percentage of Total Hours](plots/percentage-of-total-hours.png)
+
 
 # 5. Conclusions and Recommendations
 
