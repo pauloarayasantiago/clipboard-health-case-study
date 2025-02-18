@@ -56,6 +56,9 @@ High contract days are a phenomenon where any of the subsets of staff clocks in 
 	
 Each individual facility is represented by provider number and contributed approximately ninety-one days of data to the datasets. There are a total of 14,546 facilities, which were binned into four sizes: small, medium, large, and very large. They reported census ranging from 1 to 732 occupants. The maximum number of occupants reported hints at the possibility of overflowing facilities given that the largest facilities tend to range between the 200s; alternatively, domain research suggests that these facilities might be multi-compound facilities reporting under the same name. The smallest facilities with fewer than 50 average residents represent almost a fourth of the total distribution.
 
+![Distribution of Facility Census](plots/distribution-of-facility-census.png)
+![Facility Counts by Size Category](plots/facility-counts-by-size-category.png)
+
 ### 4.1.1 The Numbers
 
 Total Facilities:
@@ -75,6 +78,8 @@ Census Range:
 ## 4.2 Staffing
 
 These plots demonstrate the daily trends of the different staffing types with regards to the amount of temporary staff. Nursing subsets oscillate between ~6-9% throughout the week, with licensed practical nurses presenting the higher percentages. RN, LPN and CNA, all show a significant spike on weekends, with increases of about ~20%. On the other hand support staff by default presents a much higher ratio throughout the week, representing an almost compounded sum of the percentages of its counterparts (although it decreases on weekends). This highlights two points; weekends represent a consistent rise in contract nursing staff and support staff presents a considerable consistent need for temporary staff.
+
+![Contract Usage by Day](plots/contract-usage-by-day.png)
 
 ### 4.2.1 The Numbers
 
@@ -97,9 +102,15 @@ Support Staff:
 	
 Following the time analysis, almost 65% of high contract days occur on the weekends. That is two days in which most of these particular opportunities to fill in temporary slots occur. Given that there are over 79000 of these days, it can be implied that they represent at least as many shifts that need filling.
 
+![Distribution of High Contract Days by Day of Week](plots/distribution-of-high-contract-days-by-day-of-week.png)
+
 More than 7000 unique facilities experience high contract days. Across all facility sizes support staff holds the highest percentage of high contract days, with RN's a not so close second. However, small facilities display the highest percentages of high contract days when compared to its peers. In context these differences can add up to be significant, but further analysis into how many hours of labor they represent is required. Although lower than the rest, the largest facilities still require a significant amount of RN and support; pending exploring how many hours these percentages actually represent.
 
+![High Contract by Staff](plots/high-contract-by-staff.png)
+
 A smaller percentage of high contract doesn't necessarily mean fewer hours as the facility size can compound into larger sums. Caution arises from the plots which demonstrates that more high contract days does not imply more contract hours(~6% high contract days only sum up to about ~4% of hours).
+
+![Days vs. Hours](plots/days-vs-hours.png)
 
 ### 4.3.1 The Numbers
 
@@ -121,6 +132,8 @@ A smaller percentage of high contract doesn't necessarily mean fewer hours as th
 ## 4.4 High Contract Days in Hours
 
 When you add up all the hours that high contract days represent, you reach a total of more than ~4 million hours of contract work. Neither large facilities with their big staff sizes nor small facilities with their high ratios, take the number one spot in total hours. Medium facilities almost double their competition. This is unsurprising being the largest pool of facilities, but what is interesting is that the demographic that needs the most amount of contract hours throughout all facilities sizes, are certified nursing assistants. Here we have found our true niche in the data, certified nursing assistant are across the board sought after positions that need temporary filling; rising especially on the weekends. Considering their size, it is also worth mentioning that small facilities amount to a staggering accumulation of contract hours; matching large facilities in their needs of CNA's.
+
+![Hours Distribution](plots/hours-distribution.png)
 
 ### 4.4.1 The Numbers
 
@@ -151,15 +164,7 @@ How is it possible that CNA accounts for so many hours with such a small percent
 
 Well that is explained in the way high contract days were calculated in the beginning of this analysis. A high contract days represents when ANY of the categories has over 99% contract usage... This is to emphasize the days the facilities might be short staffed or to detect particular staffing practices. Regardless, this doesn't disprove the enormous need for temporary CNA's across the board. They are needed on Tuesdays, Sundays, small and large. Even though the very large facilities don't amount any temporary CNA hours on high contract days, that does not mean that further analysis won't uncover that any given day they do require plenty.
 
-![Contract Usage by Day](plots/contract-usage-by-day.png)
-![Days vs. Hours](plots/days-vs-hours.png)
-![Distribution of Facility Census](plots/distribution-of-facility-census.png)
-![Distribution of High Contract Days by Day of Week](plots/distribution-of-high-contract-days-by-day-of-week.png)
-![Facility Counts by Size Category](plots/facility-counts-by-size-category.png)
-![High Contract by Staff](plots/high-contract-by-staff.png)
-![Hours Distribution](plots/hours-distribution.png)
 ![Percentage of Total Hours](plots/percentage-of-total-hours.png)
-
 
 # 5. Conclusions and Recommendations
 
